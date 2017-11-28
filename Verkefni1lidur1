@@ -1,0 +1,90 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+char input()
+{
+    char inp;
+    cin >> inp;
+    return inp;
+}
+
+
+void read()
+{
+    int counter = 1;
+
+    char c = 'a';
+    string str;
+    ifstream fin;
+    fin.open("randomTexti.txt");
+    if(fin.is_open())
+    {
+        while(!fin.eof())
+        {
+            getline(fin, str);
+            cout << str << endl;
+            counter++;
+            if (counter %10 == 0 )
+            {
+                cout << "do you wish to continue?";
+                cin >> c;
+                if (c == 'n')
+                {
+                    break;
+                }
+                else if (c != 'y')
+                {
+                    while (c != 'y')
+                    {
+                        cout << "do you wish to continue?";
+                        cin >> c;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+void write()
+{
+    string str;
+    ofstream fout;
+    fout.open("randomTexti.txt", ios::app);
+    if(fout.is_open())
+    {
+        do
+        {
+            getline(cin, str);
+            if(str[0] == '\\') break;
+            fout << str << endl;
+
+        }
+        while(str[0] != '\\');
+    }
+    fout.close();
+}
+
+int main()
+{
+    //velja hvort fallið maður vill nota
+    cout << "Read or Write? read = r, write = w, quit = q: ";
+    char in = input();
+    while(in == 'r' || in == 'w')
+    {
+        if(in == 'r')
+        {
+            read();
+        }
+        if(in == 'w')
+        {
+            write();
+        }
+        cout << "Read or Write? read = r, write = w, quit = q: ";
+        in = input();
+    }
+    return 0;
+}
