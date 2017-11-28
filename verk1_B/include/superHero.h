@@ -15,8 +15,8 @@ class superHero
     public:
         superHero();
         superHero(string name, int age, char power);
-        friend ostream& operator << (ostream& out, const superHero hero);
-        friend istream& operator >> (istream& in, superHero hero);
+        friend ostream& operator << (ostream& out, const superHero& hero);
+        friend istream& operator >> (istream& in, superHero& hero);
 };
 
 #endif // SUPERHERO_H

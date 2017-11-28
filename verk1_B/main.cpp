@@ -19,12 +19,15 @@ void createHero()
     fout.open("Heroes.txt", ios::app);
     if(fout.is_open())
     {
+        cout << "Please enter hero's name: ";
         cin >> name;
+        cout << "Please enter hero's age: ";
         cin >> age;
+        cout << "Please enter hero's power: ";
         cin >> power;
         fout << name << endl;
         fout << age << endl;
-        fout << power;
+        fout << power << endl;
         fout.close();
     }
 }
@@ -32,7 +35,6 @@ void readHeroes()
 {
     ifstream fin;
     superHero hero;
-    //int counter = 1;
     fin.open("Heroes.txt");
     if(fin.is_open())
     {
