@@ -1,6 +1,5 @@
 #include "superHero.h"
 
-
 using namespace std;
 
 char input()
@@ -8,6 +7,46 @@ char input()
     char in;
     cin >> in;
     return in;
+}
+
+void binaryCreate()
+{
+    ofstream fout;
+    superHero hero;
+    cin >> hero;
+
+    fout.open("binaryHeroes.txt", ios::binary|ios::app);
+
+    fout.write((char*)(&hero), sizeof(superHero));
+
+    fout.close();
+
+
+    //cout << "dfdf";
+}
+void binaryRead()
+{
+    ifstream fin;
+
+    fin.open("binaryHeroes.txt", ios::binary);
+
+    fin.seekg(0, fin.end);
+    int numHeroes = fin.tellg() / sizeof(superHero);
+    fin.seekg(0, fin.beg);
+
+    superHero *hero = new superHero[numHeroes];
+    fin.read((char*)hero, sizeof(superHero) * numHeroes);
+
+    fin.close();
+
+    for(int i = 0; i < numHeroes; i++)
+    {
+        cout << hero[i] << endl;
+    }
+
+    delete[] hero;
+
+    //cout << "fdsfs";
 }
 
 void createHero()
@@ -52,9 +91,11 @@ void readHeroes()
 
 int main()
 {
-    cout << "Create or read heroes? create = c, read = r, quit = q: ";
+    cout << "Create or read heroes normally or using binary files?" << endl;
+    cout << "create = c, read = r, binary create = b, binary read = d, quit = q: ";
     char inp = input();
-    while(inp == 'c' || inp == 'r')
+    cout << endl;
+    while(inp == 'c' || inp == 'r' || inp == 'b' || inp == 'd')
     {
         if(inp == 'c')
         {
@@ -64,8 +105,18 @@ int main()
         {
             readHeroes();
         }
-        cout << "Create or read heroes? create = c, read = r, quit = q: ";
+        if(inp == 'b')
+        {
+            binaryCreate();
+        }
+        if(inp == 'd')
+        {
+            binaryRead();
+        }
+        cout << "Create or read heroes normally or using binary files?" << endl;
+        cout << "create = c, read = r, binary create = b, binary read = d, quit = q: ";
         inp = input();
+        cout << endl;
     }
 
     return 0;

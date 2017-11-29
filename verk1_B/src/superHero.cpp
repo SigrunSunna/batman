@@ -28,6 +28,8 @@ ostream& operator << (ostream& out, const superHero& hero)
 }
 istream& operator >> (istream& in, superHero& hero)
 {
-    in >> hero._name >> hero._age >> hero._power;
+    in >> hero._name;
+    in >> hero._age;
+    in >> hero._power;
     return in;
 }
