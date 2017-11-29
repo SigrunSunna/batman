@@ -40,6 +40,7 @@ void readHeroes()
     {
         while(!fin.eof())
         {
+            fin >> hero;
             if ( !fin.eof() )
             {
             cout << hero << endl;
