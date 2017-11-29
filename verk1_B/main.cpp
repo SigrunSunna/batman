@@ -13,7 +13,7 @@ char input()
 void createHero()
 {
     ofstream fout;
-    string name;
+    char name[30];
     int age;
     char power;
     fout.open("Heroes.txt", ios::app);
@@ -41,11 +41,7 @@ void readHeroes()
         while(!fin.eof())
         {
             fin >> hero;
-<<<<<<< HEAD
             if (!fin.eof())
-=======
-            if ( !fin.eof() )
->>>>>>> 14bdc9ec7e3286822ac1388cb4764853bd0b413b
             {
                 cout << hero << endl;
             }
