@@ -4,3 +4,13 @@ f
 Superman
 220
 f
+uselessDude
+50
+n
+HackerMan
+28
+h
+
+Thor
+420
+f
