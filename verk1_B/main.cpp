@@ -41,32 +41,22 @@ void binaryRead()
 
     for(int i = 0; i < numHeroes; i++)
     {
+        hero[i].setVerbose(false);
         cout << hero[i] << endl;
     }
 
     delete[] hero;
-
-    //cout << "fdsfs";
 }
 
 void createHero()
 {
     ofstream fout;
-    char name[30];
-    int age;
-    char power;
+    superHero hero;
     fout.open("Heroes.txt", ios::app);
     if(fout.is_open())
     {
-        cout << "Please enter hero's name: ";
-        cin >> name;
-        cout << "Please enter hero's age: ";
-        cin >> age;
-        cout << "Please enter hero's power: ";
-        cin >> power;
-        fout << name << endl;
-        fout << age << endl;
-        fout << power << endl;
+        cin >> hero;
+        fout << hero << endl;
         fout.close();
     }
 }
@@ -79,11 +69,12 @@ void readHeroes()
     {
         while(!fin.eof())
         {
-            fin >> hero;
-            if (!fin.eof())
-            {
-                cout << hero << endl;
-            }
+                hero.setVerbose(false);
+                fin >> hero;
+                if (!fin.eof())
+                {
+                    cout << hero << endl;
+                }
         }
     }
     fin.close();

@@ -13,7 +13,14 @@ h
 Thor
 420
 f
-
 Jay
 55
 d
+wart
+1000
+n
+
+plebbi
+50
+o
+
