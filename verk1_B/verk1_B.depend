@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1511906645 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\src\superhero.cpp
+1511967991 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\src\superhero.cpp
 	"superHero.h"
 
-1511906344 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\include\superhero.h
+1511968088 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\include\superhero.h
 	<iostream>
 	<string>
 	<fstream>
 
-1511905706 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\main.cpp
+1511965916 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_b\main.cpp
 	"superHero.h"
 

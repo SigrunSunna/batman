@@ -2,13 +2,13 @@
 
 superHero::superHero()
 {
-    _name = "";
+    _name[0] = '\0';
     _age = 0;
     _power = 'n';
 }
-superHero::superHero(string name, int age, char power)
+superHero::superHero(char* name, int age, char power)
 {
-    _name = name;
+    _name[0] = name[0];
     _age = age;
     _power = power;
 }

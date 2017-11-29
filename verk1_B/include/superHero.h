@@ -9,12 +9,12 @@ using namespace std;
 class superHero
 {
     private:
-        string _name;
+        char _name[30];
         int _age;
         char _power;
     public:
         superHero();
-        superHero(string name, int age, char power);
+        superHero(char* name, int age, char power);
         friend ostream& operator << (ostream& out, const superHero& hero);
         friend istream& operator >> (istream& in, superHero& hero);
 };
