@@ -6,6 +6,7 @@ class Delivery
 {
     public:
         Delivery();
+        void deliveryUI();
         virtual ~Delivery();
 
     protected:

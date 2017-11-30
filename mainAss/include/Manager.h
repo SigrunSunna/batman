@@ -6,6 +6,7 @@ class Manager
 {
     public:
         Manager();
+        void managerUI();
         virtual ~Manager();
 
     protected:

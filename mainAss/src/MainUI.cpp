@@ -2,12 +2,12 @@
 
 void MainUI::startUI()
 {
-    char input;
-    cout << "What is your position?" << endl;
-    cout << "Manager = m, Sales = s, Baker = b, Delivery = d, quit = q: ";
-    cin >> input;
-    while(input == 'm' || input == 's' || input == 'b' || input == 'd')
+    char input = '\0';
+    while(input != 'q')
     {
+        cout << "What is your position?" << endl;
+        cout << "Manager = m, Sales = s, Baker = b, Delivery = d, quit = q: ";
+        cin >> input;
         if(input == 'm')
         {
             Manager manager;
@@ -24,8 +24,5 @@ void MainUI::startUI()
         {
             Delivery delivery;
         }
-    cout << "What is your position?" << endl;
-    cout << "Manager = m, Sales = s, Baker = b, Delivery = d, quit = Any other button: ";
-    cin >> input;
     }
 }

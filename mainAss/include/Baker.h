@@ -6,6 +6,7 @@ class Baker
 {
     public:
         Baker();
+        bakerUI();
         virtual ~Baker();
 
     protected:

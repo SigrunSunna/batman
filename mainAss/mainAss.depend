@@ -12,22 +12,22 @@
 	<fstream>
 	<string>
 
-1512060520 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\src\mainui.cpp
+1512061882 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\src\mainui.cpp
 	"MainUI.h"
 
 1512059973 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\src\manager.cpp
 	"Manager.h"
 
-1512059973 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\manager.h
+1512061470 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\manager.h
 
 1512059999 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\src\sales.cpp
 	"Sales.h"
 
-1512059999 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\sales.h
+1512061615 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\sales.h
 
-1512060550 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\baker.h
+1512061615 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\baker.h
 
-1512060565 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\delivery.h
+1512061615 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\include\delivery.h
 
 1512060550 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainass\src\baker.cpp
 	"Baker.h"

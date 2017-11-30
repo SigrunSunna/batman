@@ -6,6 +6,7 @@ class Sales
 {
     public:
         Sales();
+        void salesUI();
         virtual ~Sales();
 
     protected:
