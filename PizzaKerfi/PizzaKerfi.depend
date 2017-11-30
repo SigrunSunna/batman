@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1512057419 source:c:\users\jóhann\desktop\3viknaafangi\batman\pizzakerfi\main.cpp
+	"pizza.h"
+
+1512057478 source:c:\users\jóhann\desktop\3viknaafangi\batman\pizzakerfi\src\pizza.cpp
+	"pizza.h"
+	<iostream>
+	<string>
+	<fstream>
+
+1512056751 c:\users\jóhann\desktop\3viknaafangi\batman\pizzakerfi\include\pizza.h
+	<iostream>
+	<string>
+	<fstream>
+
