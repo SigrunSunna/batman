@@ -64,7 +64,7 @@ void read_pizza()
 
 int main()
 {
-create_pizza ();
+create_pizza();
 read_pizza();
 
 

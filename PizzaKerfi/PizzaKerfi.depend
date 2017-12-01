@@ -13,3 +13,12 @@
 	<string>
 	<fstream>
 
+1512058171 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\pizzakerfi\main.cpp
+	"pizza.h"
+
+1512058171 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\pizzakerfi\src\pizza.cpp
+	"pizza.h"
+	<iostream>
+	<string>
+	<fstream>
+

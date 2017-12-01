@@ -24,5 +24,11 @@ void MainUI::startUI()
         {
             Delivery delivery;
         }
+        if(input != 'm' && input != 's' && input != 'b' && input != 'd' && input != 'q')
+        {
+            cout << endl;
+            cout << "Wrong input!, please choose again." << endl;
+            cout << endl;
+        }
     }
 }
