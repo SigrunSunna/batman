@@ -11,18 +11,24 @@ char input()
 
 void binaryCreate()
 {
+    int num;
     ofstream fout;
-    superHero hero;
-    cin >> hero;
-
+    cout << "How many heroes would you like to create?: ";
+    cin >> num;
+    superHero *hero = new superHero[num];
+    for(int i = 0; i < num; i++)
+    {
+        cin >> hero[i];
+        cout << endl;
+    }
     fout.open("binaryHeroes.txt", ios::binary|ios::app);
 
-    fout.write((char*)(&hero), sizeof(superHero));
+    fout.write((char*)hero, sizeof(superHero) * num);
 
     fout.close();
 
+    delete[] hero;
 
-    //cout << "dfdf";
 }
 void binaryRead()
 {
