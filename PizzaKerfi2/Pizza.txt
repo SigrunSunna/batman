@@ -1,0 +1,14 @@
+Large
+Pepperoni
+Mushroom
+Ham
+1950
+Small
+Pinapple
+Mushroom
+Ham
+1350
+Medium
+Pepperoni
+Mushroom
+1500
