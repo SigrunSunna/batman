@@ -22,6 +22,7 @@ void create_pizza ()
         cin >> toppings;
 
 
+
         if (sizep == 's')
         {
             price = 900;
@@ -34,61 +35,29 @@ void create_pizza ()
         {
             price = 1500;
         }
-        for(int i = 0; i < toppings.size(); i++)
+        //int a = toppings.size();
+        string _toppings = "";
+        for(int i = 0; i < (int)toppings.size(); i++)
         {
             if(toppings[i] == 'p' ||toppings[i] == 'h' ||toppings[i] == 'm' ||toppings[i] == 'j' ||toppings[i] == 'a')
             {
+                _toppings = _toppings + toppings[i];
                 price = price +150;
             }
 
         }
-        // price = price + (toppings.size() * 150);
-        switch(sizep)
-        {
-        case 'l':
-            fout << "Large" << endl;
-            break;
-        case 's':
-            fout << "Small" << endl;
-            break;
-        case 'm':
-            fout << "Medium" << endl;
-            break;
-        }
-        //       fout << sizep << endl;
-        // fout << toppings << endl;
-
-        for (int i = 0; i < toppings.size(); i++)
-        {
-            switch(toppings[i])
-            {
-            case 'p':
-                fout << "Pepperoni" << endl;
-                break;
-            case 'h':
-                fout << "Ham" << endl;
-                break;
-            case 'm':
-                fout << "Mushroom" << endl;
-                break;
-            case 'c':
-                fout << "Chicken" << endl;
-                break;
-            case 'a':
-                fout << "Pinapple" << endl;
-                break;
-            case 'b':
-                fout << "Bellpepper" << endl;
-                break;
-            case 'j':
-                fout << "Jalapeno" << endl;
-                break;
-            }
-        }
-
-
-        fout << price << endl;
+        pizza baka1(sizep, price, _toppings);
+        fout << baka1.list_pizza();
         fout.close();
+        cout << baka1.pprint();
+
+
+
+
+
+
+
+
     }
 
 }
@@ -97,8 +66,10 @@ void create_pizza ()
 void read_pizza()
 {
     string str;
+
+
     ifstream fin;
-    pizza pontun;
+    //pizza pontun;
     fin.open("pizza.txt");
     if(fin.is_open())
     {
@@ -109,6 +80,8 @@ void read_pizza()
         }
     }
     fin.close();
+
+
 }
 
 int main()

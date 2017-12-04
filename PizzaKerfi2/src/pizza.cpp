@@ -3,49 +3,105 @@
 #include <string>
 #include <fstream>
 
-pizza::pizza()
-{
-        _sizep = 'L';
-        _price = 200;
-        _toppings = "";
-
-}
 
 pizza::pizza(char sizep, int price, string toppings)
 {
     _sizep = sizep;
     _price = price;
     _toppings = toppings;
+    add_number();
 }
 
-
-
-
-ostream& operator << (ostream& out, const pizza& baka)
+void pizza::add_number()
 {
+    ofstream fout;
+    ifstream fin2;
+    int tala;
+    string str;
+    fin2.open("nr_pizzu.txt", ios::app);
 
-    if(baka._sizep == 's')
+    if (getline(fin2, str))
     {
-    out << "Small pizza " << endl;
+        tala = stoi(str);
     }
-    if(baka._sizep == 'm')
+    else
     {
-         out << "Medium pizza " << endl;
-    }
-    if(baka._sizep == 'l')
-    {
-         out << "Large pizza " << endl;
+        tala = 0;
     }
 
-    out << baka._toppings << endl;
+    _nr_Pizzu = tala;
+    tala = tala +1;
+    fin2.close();
+    fout.open("nr_pizzu.txt");
+    fout << tala;
 
-        out << "Prize: " << baka._price << endl;
+    fin2.close();
+    fout.close();
 
-
-
-
-    return out;
 }
+string pizza::pprint()
+{
+    string str = "";
+
+    str = str + "Order no: " + to_string(_nr_Pizzu) + "\n";
+    switch(_sizep)
+    {
+    case 'l':
+        str = str + "Size: large" + "\n";
+        break;
+    case 's':
+        str = str + "Size: small"  + "\n";
+        break;
+    case 'm':
+        str = str + "Size: medium" + "\n";
+        break;
+    }
+    for (int i = 0; i < (int)_toppings.size(); i++)
+    {
+        switch(_toppings[i])
+        {
+        case 'p':
+            str = str + "Pepperoni" + "\n";
+            break;
+        case 'h':
+            str = str + "Ham" + "\n";
+            break;
+        case 'm':
+            str = str + "Mushroom" + "\n";
+            break;
+        case 'c':
+            str = str + "Chicken" + "\n";
+            break;
+        case 'a':
+            str = str + "Pinapple" + "\n";
+            break;
+        case 'b':
+            str = str + "Bellpepper" + "\n";
+            break;
+        case 'j':
+            str = str + "Jalapeno" + "\n";
+            break;
+        }
+
+    }
+
+    str = str + "---------------" + "\n";
+
+    return str;
+
+
+
+}
+
+string pizza::list_pizza()
+{
+    string str;
+    str = to_string(_nr_Pizzu) + ";" + _sizep + ";" +  _toppings + ";" + "\n";
+    return str;
+}
+
+
+
 
 
 istream& operator >> (istream& in, pizza& pontun)
@@ -64,7 +120,7 @@ istream& operator >> (istream& in, pizza& pontun)
     {
         pontun._price = 900;
     }*/
-    in /*>> pontun._sizep >> pontun._toppings*/ >> pontun._price;
+    /*>> pontun._sizep >> pontun._toppings*/
     return in;
 }
 
