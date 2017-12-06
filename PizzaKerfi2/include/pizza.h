@@ -2,6 +2,7 @@
 #define PIZZA_H
 #include <iostream>
 #include <string>
+#include <string.h>
 #include <fstream>
 #include <sstream>
 
@@ -12,7 +13,7 @@ class pizza
 {
     public:
     pizza();
-    pizza(char sizep, int price, string toppings);
+    pizza(char sizep, string toppings, int _status);
     //void create_pizza ();
     friend ostream& operator << (ostream& out, const pizza& baka);
     friend istream& operator >> (istream& in, pizza& pontun);

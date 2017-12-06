@@ -4,12 +4,79 @@
 #include <fstream>
 
 
-pizza::pizza(char sizep, int price, string toppings)
+pizza::pizza(char sizep, string toppings, int status)
 {
     _sizep = sizep;
-    _price = price;
-    _toppings = toppings;
+    _toppings = "";
+    _status = status;
     add_number();
+    int toppings_fjoldi = 7;
+
+    char toppingsMenu[100];
+    string toppingsName[100];
+
+
+    toppingsMenu[0] = 'p';
+    toppingsMenu[1] = 'h';
+    toppingsMenu[2] = 'c';
+    toppingsMenu[3] = 'a';
+    toppingsMenu[4] = 'b';
+    toppingsMenu[5] = 'j';
+    toppingsMenu[6] = 'm';
+
+
+    toppingsName[0] = "Pepperoni";
+    toppingsName[1] = "Ham";
+    toppingsName[2] = "Chicken";
+    toppingsName[3] = "Pinapple";
+    toppingsName[4] = "Bellpepper";
+    toppingsName[5] = "Jalapeno";
+    toppingsName[6] = "Mushroom";
+
+
+
+
+
+    if (sizep == 's')
+    {
+        _price = 900;
+    }
+    else if (sizep == 'm')
+    {
+        _price = 1200;
+    }
+    else if (sizep == 'l')
+    {
+        _price = 1500;
+    }
+    //int a = toppings.size();
+    for(int i = 0; i < (int)toppings.size(); i++)
+    {
+        for(int j = 0; j < toppings_fjoldi; j++)
+        {
+            if(toppings[i] == toppingsMenu[j])
+            {
+
+                _toppings = _toppings + toppings[i];
+                switch (sizep)
+                {
+                case 'l':
+                    _price = _price +150;
+                    break;
+                case 'm':
+                    _price = _price +120;
+                    break;
+                case 's':
+                    _price = _price +90;
+                    break;
+                }
+            }
+
+        }
+
+
+    }
+
 }
 
 void pizza::add_number()
@@ -84,6 +151,8 @@ string pizza::pprint()
         }
 
     }
+    str = str + "Price: " + to_string(_price) + "\n";
+
 
     str = str + "---------------" + "\n";
 
