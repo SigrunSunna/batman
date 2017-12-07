@@ -4,17 +4,23 @@
 #include <fstream>
 
 
+pizza::pizza(void)
+{
+    _sizep = 'l';
+    _toppings = "";
+    _status = 0;
+    _price = 0;
+    _nr_Pizzu = -1;
+
+
+}
+
 pizza::pizza(char sizep, string toppings, int status)
 {
     _sizep = sizep;
     _toppings = "";
     _status = status;
     add_number();
-    int toppings_fjoldi = 7;
-
-    char toppingsMenu[100];
-    string toppingsName[100];
-
 
     toppingsMenu[0] = 'p';
     toppingsMenu[1] = 'h';
@@ -33,23 +39,9 @@ pizza::pizza(char sizep, string toppings, int status)
     toppingsName[5] = "Jalapeno";
     toppingsName[6] = "Mushroom";
 
+    //cout << "er i constructor" <<endl;
 
 
-
-
-    if (sizep == 's')
-    {
-        _price = 900;
-    }
-    else if (sizep == 'm')
-    {
-        _price = 1200;
-    }
-    else if (sizep == 'l')
-    {
-        _price = 1500;
-    }
-    //int a = toppings.size();
     for(int i = 0; i < (int)toppings.size(); i++)
     {
         for(int j = 0; j < toppings_fjoldi; j++)
@@ -58,26 +50,61 @@ pizza::pizza(char sizep, string toppings, int status)
             {
 
                 _toppings = _toppings + toppings[i];
-                switch (sizep)
-                {
-                case 'l':
-                    _price = _price +150;
-                    break;
-                case 'm':
-                    _price = _price +120;
-                    break;
-                case 's':
-                    _price = _price +90;
-                    break;
-                }
+
             }
 
         }
 
 
     }
+    price();
+
+
+
 
 }
+
+
+void pizza::price ()
+{
+    if (_sizep == 's')
+    {
+        _price = 900;
+    }
+    else if (_sizep == 'm')
+    {
+        _price = 1200;
+    }
+    else if (_sizep == 'l')
+    {
+        _price = 1500;
+    }
+    //int a = toppings.size();
+    if (_toppings == "T")
+    {
+        return;
+    }
+    for(int i = 0; i < (int)_toppings.size(); i++)
+    {
+
+        switch (_sizep)
+        {
+        case 'l':
+            _price = _price +150;
+            break;
+        case 'm':
+            _price = _price +120;
+            break;
+        case 's':
+            _price = _price +90;
+            break;
+        }
+
+    }
+
+}
+
+
 
 void pizza::add_number()
 {
@@ -162,36 +189,39 @@ string pizza::pprint()
 
 }
 
-string pizza::list_pizza()
+
+ostream& operator << (ostream& os, pizza& p)
 {
-    string str;
-    str = to_string(_nr_Pizzu) + ";" + _sizep + ";" +  _toppings + ";" + "\n";
-    return str;
+
+    if(p._toppings.size() == 0)
+    {
+        os << p._nr_Pizzu <<" " << p._sizep << " " << "T" << endl;
+    }
+    else
+    {
+        os << p._nr_Pizzu <<" " << p._sizep << " " << p._toppings << endl;
+    }
+
+
+    return os;
+
+}
+
+istream& operator >> (istream& is, pizza& p)
+{
+    // write out individual members of s with an end of line between each one
+    is >> p._nr_Pizzu >> p._sizep >> p._toppings;
+    p.price();
+    return is;
 }
 
 
 
 
 
-istream& operator >> (istream& in, pizza& pontun)
-{
-    /*if (pontun._sizep == 'l')
-    {
-        pontun._price = 1500;
-    }
 
-    if (pontun._sizep == 'm')
-    {
-        pontun._price = 1200;
-    }
 
-    if (pontun._sizep == 's')
-    {
-        pontun._price = 900;
-    }*/
-    /*>> pontun._sizep >> pontun._toppings*/
-    return in;
-}
+
 
 
 
