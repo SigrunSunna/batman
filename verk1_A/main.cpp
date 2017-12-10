@@ -11,6 +11,18 @@ char input()
     return inp;
 }
 
+char yornInput ()
+{
+    char inp = 'a';
+    while (inp != 'y' && inp !=  'n')
+    {
+        cout << "Do you wish to continue (y/n)? ";
+        cin >> inp;
+    }
+
+    return inp;
+}
+
 
 void read()
 {
@@ -27,9 +39,8 @@ void read()
             cout << str << endl;
             if(counter == 10)
             {
-                cout << "Do you wish to continue (y/n)? ";
                 counter = 0;
-                char inp = input();
+                char inp = yornInput();
                 if(inp == 'n')
                 {
                     fin.close();
@@ -52,7 +63,8 @@ void write()
             if(str[0] == '\\') break;
             fout << str << endl;
 
-        }while(str[0] != '\\');
+        }
+        while(str[0] != '\\');
     }
     fout.close();
 }

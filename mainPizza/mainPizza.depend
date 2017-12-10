@@ -1,0 +1,60 @@
+# depslib dependency file v1.0
+1512925451 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512839014 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\pizzacomponents\pizza.cpp
+	"Pizza.h"
+
+1512839014 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\pizzacomponents\pizza.h
+	<iostream>
+	<string>
+	"Prices.h"
+
+1512841112 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\pizzacomponents\prices.cpp
+	"Prices.h"
+
+1512834886 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\pizzacomponents\prices.h
+	<iostream>
+	<string>
+
+1512837960 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\repositories\pizzarepo.cpp
+	"PizzaRepo.h"
+
+1512837960 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\repositories\pizzarepo.h
+
+1512841669 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\ui\salesui.cpp
+	"SalesUI.h"
+
+1512838642 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\ui\salesui.h
+	<iostream>
+	"Pizza.h"
+
+1512924846 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\ui\bakerui.cpp
+	"BakerUI.h"
+
+1512924887 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\ui\bakerui.h
+	<iostream>
+
+1512925408 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\ui\deliveryui.cpp
+	"DeliveryUI.h"
+
+1512925408 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\ui\deliveryui.h
+	<iostream>
+
+1512926366 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\ui\mainui.cpp
+	"MainUI.h"
+
+1512926365 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\ui\mainui.h
+	<iostream>
+	"SalesUI.h"
+	"BakerUI.h"
+	"DeliveryUI.h"
+	"ManagementUI.h"
+
+1512925408 c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\include\ui\managementui.h
+	<iostream>
+
+1512925408 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\mainpizza\src\ui\managementui.cpp
+	"ManagementUI.h"
+
