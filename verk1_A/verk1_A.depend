@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512145952 source:c:\users\birkir\documents\hr haust 2017\3viknaafangi\batman\verk1_a\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+

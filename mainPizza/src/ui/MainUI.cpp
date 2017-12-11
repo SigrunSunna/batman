@@ -10,19 +10,19 @@ void MainUI::startUI()
         cin >> input;
         if(input == 'm')
         {
-            Manager manager;
+            manager.Management();
         }
         if(input == 's')
         {
-            Sales sales;
+            sales.Sales();
         }
         if(input == 'b')
         {
-            Baker baker;
+            baker.Baker();
         }
         if(input == 'd')
         {
-            Delivery delivery;
+            delivery.Delivery();
         }
         if(input != 'm' && input != 's' && input != 'b' && input != 'd' && input != 'q')
         {

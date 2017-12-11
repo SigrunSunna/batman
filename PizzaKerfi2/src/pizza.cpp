@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 
 pizza::pizza(void)
@@ -39,7 +40,6 @@ pizza::pizza(char sizep, string toppings, int status)
     toppingsName[5] = "Jalapeno";
     toppingsName[6] = "Mushroom";
 
-    //cout << "er i constructor" <<endl;
 
 
     for(int i = 0; i < (int)toppings.size(); i++)
@@ -179,6 +179,22 @@ string pizza::pprint()
     }
     str = str + "Price: " + to_string(_price) + "\n";
 
+    string status;
+
+    switch(_status)
+    {
+    case 0: status = "Not started \n";
+        break;
+    case 1: status = "Started \n";
+        break;
+    case 2: status = "Ready \n";
+    break;
+    case 3: status = "Delivered \n";
+    break;
+    }
+
+    str = str + status;
+
 
     str = str + "---------------" + "\n";
 
@@ -195,9 +211,12 @@ ostream& operator << (ostream& os, pizza& p)
     if(p._toppings.size() == 0)
     {
         os << p._nr_Pizzu <<" " << p._sizep << " " << "T" << " " << p._status << endl;
+
     }
+    else
     {
         os << p._nr_Pizzu <<" " << p._sizep << " " << p._toppings << " " << p._status << endl;
+
     }
 
 
