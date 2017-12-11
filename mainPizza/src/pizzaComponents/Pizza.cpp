@@ -1,32 +1,74 @@
 #include "Pizza.h"
+#include <stddef.h>
+#include <fstream>
+
 
 Pizza::Pizza()
 {
-    //_verbose = true;
+}
+Pizza::~Pizza()
+{
 }
 
-//void Pizza::set_verbose(bool v)
-//{
-//    _verbose = v;
-//}
-
-void Pizza::set_price(int price)
+void Pizza::addTopping(Toppings topping)
 {
-    _price = price;
+    toppings.push_back(topping);
 }
 
-ostream& operator << (ostream& out, const Pizza& pizza)
+void Pizza::write(ofstream& fout) const
 {
-    out << pizza._size << endl;
-    out << pizza._toppings << endl;
-    out << pizza._price << endl;
-    return out;
+    int tCount = toppings.size();
+    fout.write((char*)(&tCount), sizeof(int));
+    //fout.write((char*)toppings, sizeof(Toppings) * toppingCount);
+    /*for(int i = 0; i < tCount; i++)
+    {
+        fout.write((char*)(&toppings.at(i)), sizeof(Toppings));
+    }*/
+    for(int i = 0; i < tCount; i++)
+    {
+        toppings[i].write(fout);
+    }
 }
-istream& operator >> (istream& in, Pizza& pizza)
+void Pizza::read(ifstream& fin)
 {
-    in >> pizza._size;
-    in >> pizza._toppings;
+    int tCount;
+    fin.read((char*)(&tCount), sizeof(int));
 
+    Toppings topping;
+    for(int i = 0; i < tCount; i++)
+    {
+        topping.read(fin);
+        addTopping(topping);
+    }
+    //initialize(topCnt);
+
+    //fin.read((char*)toppings, sizeof(Toppings) * toppingCount);
+
+}
+
+istream& operator >> (istream& in, Pizza& p)
+{
+    int toppingCount;
+    in >> toppingCount;
+
+    Toppings topping;
+    for(unsigned int i = 0; i < p.toppings.size(); i++)
+    {
+        in >> topping;
+        p.addTopping(topping);
+    }
     return in;
 }
+
+ostream& operator << (ostream& out, const Pizza& p)
+{
+    out << "Pizza with toppings: " << endl;
+    //out << p.toppingCount << " ";
+    for(unsigned int i = 0; i < p.toppings.size(); i++)
+    {
+        out << p.toppings[i] << endl;
+    }
+    return out;
+}
+
 

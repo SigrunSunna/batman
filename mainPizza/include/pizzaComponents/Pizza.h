@@ -1,26 +1,26 @@
 #ifndef PIZZA_H
 #define PIZZA_H
+#include "Toppings.h"
 #include <iostream>
-#include <string>
-#include "Prices.h"
+#include <vector>
 
 using namespace std;
 
 class Pizza
 {
-    private:
-        char _size;
-        string _toppings;
-        int _price;
-        bool _verbose;
-
     public:
         Pizza();
-        void set_price(int price);
-        //void set_verbose(bool v);
-        friend ostream& operator << (ostream& out, const Pizza& pizza);
-        friend istream& operator >> (istream& in, Pizza& pizza);
+        virtual ~Pizza();
+        void addTopping(Toppings topping);
 
+        void write(ofstream& fout) const;
+        void read(ifstream& fin);
+
+        friend ostream& operator << (ostream& out, const Pizza& p);
+        friend istream& operator >> (istream& in, Pizza& p);
+
+    private:
+        vector<Toppings> toppings;
 };
 
 #endif // PIZZA_H
