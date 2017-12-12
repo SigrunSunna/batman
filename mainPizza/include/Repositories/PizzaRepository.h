@@ -2,6 +2,7 @@
 #define PIZZAREPOSITORY_H
 #include "Pizza.h"
 #include <fstream>
+#include "OrderRepository.h"
 
 using namespace std;
 
@@ -12,7 +13,7 @@ class PizzaRepository
         virtual ~PizzaRepository();
 
         void storePizza(const Pizza& p);
-        Pizza retrievePizza();
+        Orders retrievePizza();
 
         void retrieveALL();
 

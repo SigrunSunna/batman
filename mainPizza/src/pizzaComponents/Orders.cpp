@@ -5,7 +5,7 @@ using namespace std;
 
 Orders::Orders()
 {
-    //ctor
+    _price = 0;
 }
 
 Orders::~Orders()
@@ -16,6 +16,8 @@ Orders::~Orders()
 void Orders::addPizza(Pizza p)
 {
     pizzas.push_back(p);
+    _price += p.getPrice();
+
 }
 
 void Orders::write(ofstream& fout) const
@@ -33,9 +35,13 @@ void Orders::read(ifstream& fin)
     int pCount;
     fin.read((char*)(&pCount), sizeof(int));
 
-    Pizza pizza;
     for(int i = 0; i < pCount; i++)
     {
+        Pizza pizza;
+        if(fin.eof())
+        {
+            break;
+        }
         pizza.read(fin);
         addPizza(pizza);
     }
@@ -47,8 +53,11 @@ ostream& operator << (ostream& out, const Orders& o)
     //out << p.toppingCount << " ";
     for(unsigned int i = 0; i < o.pizzas.size(); i++)
     {
-        out << o.pizzas[i] << endl;
+        out << o.pizzas[i] <<  endl;
     }
+
+    out << endl << "Total price of order: " << o._price << endl;
+
     return out;
 }
 istream& operator >> (istream& in, Orders& o)

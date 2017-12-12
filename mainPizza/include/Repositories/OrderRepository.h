@@ -10,6 +10,7 @@ class OrderRepository
     public:
         OrderRepository();
         virtual ~OrderRepository();
+        void retrieveALL();
 
         void storeOrder(const Orders& o);
         Orders retrieveOrder();

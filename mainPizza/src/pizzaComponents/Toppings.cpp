@@ -16,6 +16,7 @@ Toppings::Toppings(string name, double price)
     _price = price;
 }
 
+
 void Toppings::write(ofstream& fout) const
 {
     int stringLength = _name.length() + 1;
@@ -41,6 +42,16 @@ void Toppings::read(ifstream& fin)
 
     delete[] str;
 }
+
+
+double Toppings::getPrice ()
+        {
+            return _price;
+        }
+
+
+
+
 istream& operator >> (istream& in, Toppings& top)
 {
     cout << "Name:  ";

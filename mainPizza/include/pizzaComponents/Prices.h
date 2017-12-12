@@ -8,9 +8,17 @@ class Prices
         Prices();
         virtual ~Prices();
 
-    protected:
+        double totalPrice()
+        {
+
+        }
+
+
+
 
     private:
+        double _grandTotal;
+
 };
 
 #endif // PRICES_H

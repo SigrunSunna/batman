@@ -31,3 +31,21 @@ Orders OrderRepository::retrieveOrder()
 
     return s;
 }
+
+
+void OrderRepository::retrieveALL()
+{
+    ifstream fin;
+    fin.open("Orders.dat", ios::binary);
+
+
+    while(!fin.eof())
+    {
+        Orders s;
+        s = retrieveOrder();
+        s.read(fin);
+        cout << s;
+        cout << "----------------------" << endl;
+    }
+    fin.close();
+}

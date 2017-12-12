@@ -16,8 +16,12 @@ class Toppings
         void write(ofstream& fout) const;
         void read(ifstream& fin);
 
+        double getPrice ();
+
+
         friend ostream& operator << (ostream& out, const Toppings& top);
         friend istream& operator >> (istream& in, Toppings& top);
+
 
     protected:
 

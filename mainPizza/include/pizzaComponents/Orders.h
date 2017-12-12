@@ -22,6 +22,7 @@ class Orders
     private:
         int _orderNum;
         vector<Pizza> pizzas;
+        double _price;
 };
 
 #endif // ORDERS_H

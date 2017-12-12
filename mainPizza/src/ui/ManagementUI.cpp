@@ -18,7 +18,7 @@ void ManagementUI::Management()
         if (inp == 'v')
         {
 
-            PizzaRepository pizzaRepo;
+            OrderRepository pizzaRepo;
             pizzaRepo.retrieveALL();
         }
         if(inp == 't')

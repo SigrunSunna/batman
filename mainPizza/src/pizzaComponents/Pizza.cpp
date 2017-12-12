@@ -5,7 +5,11 @@
 
 Pizza::Pizza()
 {
+    _price = 1000;  // Grunnverd a pizzu
 }
+
+
+
 Pizza::~Pizza()
 {
 }
@@ -13,6 +17,7 @@ Pizza::~Pizza()
 void Pizza::addTopping(Toppings topping)
 {
     toppings.push_back(topping);
+    _price += topping.getPrice();
 }
 
 void Pizza::write(ofstream& fout) const
@@ -28,6 +33,8 @@ void Pizza::write(ofstream& fout) const
     {
         toppings[i].write(fout);
     }
+
+
 }
 void Pizza::read(ifstream& fin)
 {
@@ -45,6 +52,11 @@ void Pizza::read(ifstream& fin)
     //fin.read((char*)toppings, sizeof(Toppings) * toppingCount);
 
 }
+
+double Pizza::getPrice ()
+        {
+            return _price;
+        }
 
 
 
@@ -74,6 +86,7 @@ ostream& operator << (ostream& out, const Pizza& p)
     {
         out << p.toppings[i] << endl;
     }
+    out << "Total price of the pizza: " << p._price;
     return out;
 }
 

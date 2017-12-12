@@ -1,4 +1,5 @@
 #include "PizzaRepository.h"
+#include "OrderRepository.h"
 
 PizzaRepository::PizzaRepository()
 {
@@ -14,23 +15,24 @@ void PizzaRepository::storePizza(const Pizza& p)
 {
 
     ofstream fout;
+    cout << "Er ad bua til skra" << endl;
     fout.open("Pizza.dat", ios::binary | ios::app);
 
     p.write(fout);
 
     fout.close();
 }
-Pizza PizzaRepository::retrievePizza()
+Orders PizzaRepository::retrievePizza()
 {
     ifstream fin;
-    fin.open("Pizza.dat", ios::binary);
+    fin.open("Orders.dat", ios::binary);
 
-    Pizza p;
-    p.read(fin);
+    Orders s;
+    s.read(fin);
 
     fin.close();
 
-    return p;
+    return s;
 }
 
 void PizzaRepository::retrieveALL()
@@ -38,15 +40,12 @@ void PizzaRepository::retrieveALL()
     ifstream fin;
     fin.open("Pizza.dat", ios::binary);
 
-
-
     while(!fin.eof())
     {
-        Pizza p;
-        p.read(fin);
-        cout << p;
+        Orders s;
+        s.read(fin);
+        cout << s;
         cout << "----------------------" << endl;
     }
-
     fin.close();
 }
