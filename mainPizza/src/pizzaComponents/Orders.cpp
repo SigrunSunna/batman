@@ -43,6 +43,12 @@ void Orders::read(ifstream& fin)
 
 ostream& operator << (ostream& out, const Orders& o)
 {
+    out << "Order consists of: " << endl;
+    //out << p.toppingCount << " ";
+    for(unsigned int i = 0; i < o.pizzas.size(); i++)
+    {
+        out << o.pizzas[i] << endl;
+    }
     return out;
 }
 istream& operator >> (istream& in, Orders& o)

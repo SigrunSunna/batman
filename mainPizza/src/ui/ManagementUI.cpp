@@ -13,7 +13,7 @@ void ManagementUI::Management()
         cout << "t: add toppings" << endl;
         cout << "v: view orders" << endl;
         cout << "q: quit " << endl;
-        cout << ": ";
+        cout << "-> ";
         cin >> inp;
         if (inp == 'v')
         {

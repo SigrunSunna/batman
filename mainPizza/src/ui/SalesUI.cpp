@@ -8,46 +8,51 @@ using namespace std;
 void SalesUI::Sales()
 {
     char selection = '\0';
-    ToppingRepository toppingRepo;
     while(selection != 'q')
     {
-        cout << "m: make pizza" << endl;
-        cout << "r: read pizza" << endl;
+        cout << "m: make order" << endl;
+        cout << "r: read order" << endl;
         cout << "q: quit" << endl;
         cin >> selection;
 
         if(selection == 'm')
         {
-            vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
-
-            Pizza p;
-
-            int toppingSelection = -1;
-            while(toppingSelection != 0)
-            {
-                cout << "Please enter id for toppings to add (0 for no more)" << endl;
-
-                for(unsigned int i = 0; i < toppings.size(); i++)
+                Orders order;
+                char selection = 'y';
+                while(selection == 'y')
                 {
-                    cout << "[" << i + 1 << "] " << toppings[i] << endl;
-                }
-                cin >> toppingSelection;
-                if(toppingSelection > 0 && toppingSelection <= (int)toppings.size())
-                {
-                    p.addTopping(toppings[toppingSelection - 1]);
-                }
-            }
+                    vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
 
+                    Pizza p;
 
-            PizzaRepository pizzaRepo;
-            pizzaRepo.storePizza(p);
-            cout << endl;
+                    int toppingSelection = -1;
+                    while(toppingSelection != 0)
+                    {
+                        cout << "Please enter id for toppings to add (0 for no more)" << endl;
+
+                        for(unsigned int i = 0; i < toppings.size(); i++)
+                        {
+                            cout << "[" << i + 1 << "] " << toppings[i] << endl;
+                        }
+                        cin >> toppingSelection;
+                        if(toppingSelection > 0 && toppingSelection <= (int)toppings.size())
+                        {
+                            p.addTopping(toppings[toppingSelection - 1]);
+                        }
+                    }
+                    order.addPizza(p);
+                    cout << "Would you like to add another pizza?: " << endl;
+                    cin >> selection;
+                }
+                OrderRepository orderRepo;
+                orderRepo.storeOrder(order);
+                cout << endl;
         }
         if(selection == 'r')
         {
-            PizzaRepository pizzaRepo;
-            Pizza p = pizzaRepo.retrievePizza();
-            cout << p;
+            OrderRepository orderRepo;
+            Orders order = orderRepo.retrieveOrder();
+            cout << order;
 
             cout << endl;
         }
