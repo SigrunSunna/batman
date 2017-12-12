@@ -299,17 +299,108 @@
 	"PizzaRepository.h"
 	"ToppingRepository.h"
 
+1513094846 D
+
 1513092192 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\prices.cpp
 	"Prices.h"
 
 1513092192 c:\users\birkir\desktop\githubb\batman\mainpizza\include\pizzacomponents\prices.h
 
-1513095228 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\orders.cpp
+1513096116 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\orders.cpp
 	"Orders.h"
 	<fstream>
 
-1513094846 c:\users\birkir\desktop\githubb\batman\mainpizza\include\pizzacomponents\orders.h
+1513096116 c:\users\birkir\desktop\githubb\batman\mainpizza\include\pizzacomponents\orders.h
 	"Pizza.h"
 	<vector>
 	<iostream>
+
+1513094846 
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\ui\mainui.h
+	<iostream>
+	"SalesUI.h"
+	"BakerUI.h"
+	"DeliveryUI.h"
+	"ManagementUI.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\ui\salesui.h
+	<iostream>
+	"Pizza.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\pizzacomponents\pizza.h
+	"Toppings.h"
+	<iostream>
+	<vector>
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\pizzacomponents\toppings.h
+	<iostream>
+	<string.h>
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\ui\bakerui.h
+	<iostream>
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\ui\deliveryui.h
+	<iostream>
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\ui\managementui.h
+	<iostream>
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\pizzacomponents\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+	<fstream>
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\pizzacomponents\toppings.cpp
+	"Toppings.h"
+	<string.h>
+	<fstream>
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\repositories\pizzarepository.cpp
+	"PizzaRepository.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\repositories\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\repositories\toppingrepository.cpp
+	"ToppingRepository.h"
+	<fstream>
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\repositories\toppingrepository.h
+	"Toppings.h"
+	<vector>
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\ui\bakerui.cpp
+	"BakerUI.h"
+	"PizzaRepository.h"
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\ui\deliveryui.cpp
+	"DeliveryUI.h"
+	"PizzaRepository.h"
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\ui\mainui.cpp
+	"MainUI.h"
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\pizzacomponents\orders.cpp
+	"Orders.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\pizzacomponents\orders.h
+
+1513092452 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\pizzacomponents\prices.cpp
+	"Prices.h"
+
+1513092452 c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\include\pizzacomponents\prices.h
+
+1513094846 source:c:\users\sigrún suna\documents\haustönn 2017\verklegt\mainverkefni\batman\mainpizza\src\ui\salesui.cpp
+	"SalesUI.h"
+	"Toppings.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+
+1513094846 eb3553fe9ab14a8e5514653717bbbc0fe4fcd
 
