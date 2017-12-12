@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="mainPizza" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/mainPizza" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/pizzaComponents" />
+					<Add directory="include/ui" />
+					<Add directory="include/Repositories" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/mainPizza" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/pizzaComponents" />
+					<Add directory="include/ui" />
+					<Add directory="include/Repositories" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Repositories/PizzaRepository.h" />
+		<Unit filename="include/Repositories/ToppingRepository.h" />
+		<Unit filename="include/pizzaComponents/Pizza.h" />
+		<Unit filename="include/pizzaComponents/Toppings.h" />
+		<Unit filename="include/ui/BakerUI.h" />
+		<Unit filename="include/ui/DeliveryUI.h" />
+		<Unit filename="include/ui/MainUI.h" />
+		<Unit filename="include/ui/ManagementUI.h" />
+		<Unit filename="include/ui/SalesUI.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Repositories/PizzaRepository.cpp" />
+		<Unit filename="src/Repositories/ToppingRepository.cpp" />
+		<Unit filename="src/pizzaComponents/Pizza.cpp" />
+		<Unit filename="src/pizzaComponents/Toppings.cpp" />
+		<Unit filename="src/ui/BakerUI.cpp" />
+		<Unit filename="src/ui/DeliveryUI.cpp" />
+		<Unit filename="src/ui/MainUI.cpp" />
+		<Unit filename="src/ui/ManagementUI.cpp" />
+		<Unit filename="src/ui/SalesUI.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
