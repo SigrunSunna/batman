@@ -14,7 +14,7 @@ void PizzaRepository::storePizza(const Pizza& p)
 {
 
     ofstream fout;
-    fout.open("Pizza.dat", ios::binary);
+    fout.open("Pizza.dat", ios::binary | ios::app);
 
     p.write(fout);
 
@@ -31,4 +31,22 @@ Pizza PizzaRepository::retrievePizza()
     fin.close();
 
     return p;
+}
+
+void PizzaRepository::retrieveALL()
+{
+    ifstream fin;
+    fin.open("Pizza.dat", ios::binary);
+
+
+
+    while(!fin.eof())
+    {
+        Pizza p;
+        p.read(fin);
+        cout << p;
+        cout << "----------------------" << endl;
+    }
+
+    fin.close();
 }

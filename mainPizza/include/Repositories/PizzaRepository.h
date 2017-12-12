@@ -14,6 +14,8 @@ class PizzaRepository
         void storePizza(const Pizza& p);
         Pizza retrievePizza();
 
+        void retrieveALL();
+
     private:
 };
 
