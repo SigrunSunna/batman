@@ -253,7 +253,7 @@
 1513091271 c:\users\birkir\desktop\githubb\batman\mainpizza\include\ui\managementui.h
 	<iostream>
 
-1513091271 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\pizza.cpp
+1513095394 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\pizza.cpp
 	"Pizza.h"
 	<stddef.h>
 	<fstream>
@@ -293,9 +293,23 @@
 	"ManagementUI.h"
 	"PizzaRepository.h"
 
-1513091271 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\ui\salesui.cpp
+1513094846 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\ui\salesui.cpp
 	"SalesUI.h"
 	"Toppings.h"
 	"PizzaRepository.h"
 	"ToppingRepository.h"
+
+1513092192 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\prices.cpp
+	"Prices.h"
+
+1513092192 c:\users\birkir\desktop\githubb\batman\mainpizza\include\pizzacomponents\prices.h
+
+1513095228 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\orders.cpp
+	"Orders.h"
+	<fstream>
+
+1513094846 c:\users\birkir\desktop\githubb\batman\mainpizza\include\pizzacomponents\orders.h
+	"Pizza.h"
+	<vector>
+	<iostream>
 

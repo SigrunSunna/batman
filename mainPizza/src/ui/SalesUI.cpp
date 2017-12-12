@@ -52,7 +52,7 @@ void SalesUI::Sales()
 
             cout << endl;
         }
-        if(selection == 't')
+        if(selection == 't') ///þetta ætti að fara í managerUI klasann
         {
             vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
             cout << "These are the current toppings in the system: " << endl;
