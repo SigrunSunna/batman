@@ -38,18 +38,22 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Repositories/PizzaRepo.h" />
+		<Unit filename="include/Repositories/PizzaRepository.h" />
+		<Unit filename="include/Repositories/ToppingRepository.h" />
+		<Unit filename="include/pizzaComponents/Orders.h" />
 		<Unit filename="include/pizzaComponents/Pizza.h" />
-		<Unit filename="include/pizzaComponents/Prices.h" />
+		<Unit filename="include/pizzaComponents/Toppings.h" />
 		<Unit filename="include/ui/BakerUI.h" />
 		<Unit filename="include/ui/DeliveryUI.h" />
 		<Unit filename="include/ui/MainUI.h" />
 		<Unit filename="include/ui/ManagementUI.h" />
 		<Unit filename="include/ui/SalesUI.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Repositories/PizzaRepo.cpp" />
+		<Unit filename="src/Repositories/PizzaRepository.cpp" />
+		<Unit filename="src/Repositories/ToppingRepository.cpp" />
+		<Unit filename="src/pizzaComponents/Orders.cpp" />
 		<Unit filename="src/pizzaComponents/Pizza.cpp" />
-		<Unit filename="src/pizzaComponents/Prices.cpp" />
+		<Unit filename="src/pizzaComponents/Toppings.cpp" />
 		<Unit filename="src/ui/BakerUI.cpp" />
 		<Unit filename="src/ui/DeliveryUI.cpp" />
 		<Unit filename="src/ui/MainUI.cpp" />
