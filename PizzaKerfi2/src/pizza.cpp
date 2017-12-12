@@ -124,12 +124,11 @@ void pizza::add_number()
     }
 
     _nr_Pizzu = tala;
-    tala = tala +1;
+    tala++;
     fin2.close();
     fout.open("nr_pizzu.txt");
     fout << tala;
 
-    fin2.close();
     fout.close();
 
 }
@@ -211,11 +210,13 @@ ostream& operator << (ostream& os, pizza& p)
 
     if(p._toppings.size() == 0)
     {
-        os << p._nr_Pizzu <<" " << p._sizep << " " << "T"  << " " << p._status  << endl;
+        os << p._nr_Pizzu <<" " << p._sizep << " " << "T" << " " << p._status << endl;
+
     }
     else
     {
-        os << p._nr_Pizzu <<" " << p._sizep << " " << p._toppings  << " " << p._status << endl;
+        os << p._nr_Pizzu <<" " << p._sizep << " " << p._toppings << " " << p._status << endl;
+
     }
 
 
