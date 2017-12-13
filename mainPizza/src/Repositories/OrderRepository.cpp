@@ -9,7 +9,6 @@
 
 
 
-
 OrderRepository::OrderRepository()
 {
     //ctor
@@ -50,9 +49,10 @@ Orders OrderRepository::retrieveOrder()
 Orders OrderRepository::getstatusNull()
 {
 
-    unsigned char isFile =0;
+
     ifstream fin;
     stringstream ss;
+
 
     DIR *dir;
     struct dirent *ent;
@@ -62,8 +62,9 @@ Orders OrderRepository::getstatusNull()
         while ((ent = readdir (dir)) != NULL)
         {
             stringstream ss;
-            if ( ent->d_type == isFile)
-            {
+
+
+
                 ss << "Orders\\" << ent->d_name;
                 fin.open(ss.str(), ios::binary);
                 Orders s;
@@ -75,7 +76,7 @@ Orders OrderRepository::getstatusNull()
                     return s;
                 }
                 fin.close();
-            }
+
         }
         closedir (dir);
     }
@@ -88,7 +89,6 @@ Orders OrderRepository::getstatusNull()
 
 void OrderRepository::retrieveALL()
 {
-    unsigned char isFile =0;
     ifstream fin;
     stringstream ss;
 
@@ -100,8 +100,12 @@ void OrderRepository::retrieveALL()
         while ((ent = readdir (dir)) != NULL)
         {
             stringstream ss;
-            if ( ent->d_type == isFile)
+           // if ( ent->d_type == isFile)
+            //{
+            cout << "Fengum: " << ent->d_name << endl;
+            if (ent->d_name[0] != '.')
             {
+
                 ss << "Orders\\" << ent->d_name;
                 fin.open(ss.str(), ios::binary);
                 Orders s;
@@ -109,7 +113,9 @@ void OrderRepository::retrieveALL()
                 cout << s;
                 cout << "----------------------" << endl;
                 fin.close();
+
             }
+           // }
         }
         closedir (dir);
     }
