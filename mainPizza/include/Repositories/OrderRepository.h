@@ -12,6 +12,9 @@ class OrderRepository
         virtual ~OrderRepository();
         void retrieveALL();
 
+        Orders getstatusNull();
+
+
         void storeOrder(const Orders& o);
         Orders retrieveOrder();
 

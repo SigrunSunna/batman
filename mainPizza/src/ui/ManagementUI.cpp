@@ -16,10 +16,15 @@ void ManagementUI::Management()
         cout << "-> ";
         cin >> inp;
         if (inp == 'v')
-        {
+         {
+
+
+            OrderRepository orderRepo;
+            orderRepo.retrieveALL();
 
             OrderRepository pizzaRepo;
             pizzaRepo.retrieveALL();
+
         }
         if(inp == 't')
         {

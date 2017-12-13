@@ -18,6 +18,7 @@ void SalesUI::Sales()
         if(selection == 'm')
         {
                 Orders order;
+                order.add_number();
                 char selection = 'y';
                 while(selection == 'y')
                 {

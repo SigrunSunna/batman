@@ -161,17 +161,44 @@
 	"OrderRepository.h"
 	"Orders.h"
 
-1513105088 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\pizza.h
+1513100984 D
+
+1513117204 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\pizza.h
 	"Toppings.h"
 	<iostream>
 	<vector>
+
+1513108180 919dc558342641598bc2dd2771dd0f790ff17
+	"Toppings.h"
+	<iostream>
+	<vector>
+	<iostream>
+	"Orders.h"
+	"Pizza.h"
+	<stddef.h>
+	<fstream>
+	"BakerUI.h"
+	"PizzaRepository.h"
+	"ManagementUI.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+	"SalesUI.h"
+	"Toppings.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+	"Pizza.h"
+	<vector>
+	<iostream>
+	"Orders.h"
+	<fstream>
 
 1513104297 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\toppings.h
 	<iostream>
 	<string.h>
 
-1513100477 c:\users\johan\3vverkefni\batman\mainpizza\include\ui\bakerui.h
+1513128544 c:\users\johan\3vverkefni\batman\mainpizza\include\ui\bakerui.h
 	<iostream>
+	"Orders.h"
 
 1513100477 c:\users\johan\3vverkefni\batman\mainpizza\include\ui\deliveryui.h
 	<iostream>
@@ -179,12 +206,12 @@
 1513100477 c:\users\johan\3vverkefni\batman\mainpizza\include\ui\managementui.h
 	<iostream>
 
-1513107456 source:c:\users\johan\3vverkefni\batman\mainpizza\src\pizzacomponents\pizza.cpp
+1513108443 source:c:\users\johan\3vverkefni\batman\mainpizza\src\pizzacomponents\pizza.cpp
 	"Pizza.h"
 	<stddef.h>
 	<fstream>
 
-1513100477 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\bakerui.cpp
+1513130072 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\bakerui.cpp
 	"BakerUI.h"
 	"PizzaRepository.h"
 
@@ -195,12 +222,12 @@
 1513100477 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\mainui.cpp
 	"MainUI.h"
 
-1513108180 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\managementui.cpp
+1513130980 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\managementui.cpp
 	"ManagementUI.h"
 	"PizzaRepository.h"
 	"ToppingRepository.h"
 
-1513108180 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\salesui.cpp
+1513125120 source:c:\users\johan\3vverkefni\batman\mainpizza\src\ui\salesui.cpp
 	"SalesUI.h"
 	"Toppings.h"
 	"PizzaRepository.h"
@@ -310,8 +337,6 @@
 	"Toppings.h"
 	"PizzaRepository.h"
 	"ToppingRepository.h"
-
-1513094846 D
 
 1513092192 source:c:\users\birkir\desktop\githubb\batman\mainpizza\src\pizzacomponents\prices.cpp
 	"Prices.h"
@@ -423,16 +448,16 @@
 	"Orders.h"
 	<fstream>
 
-1513106266 c:\users\johan\3vverkefni\batman\mainpizza\include\repositories\orderrepository.h
+1513130650 c:\users\johan\3vverkefni\batman\mainpizza\include\repositories\orderrepository.h
 	"Orders.h"
 	<fstream>
 
-1513104773 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\orders.h
+1513130650 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\orders.h
 	"Pizza.h"
 	<vector>
 	<iostream>
 
-1513108180 source:c:\users\johan\3vverkefni\batman\mainpizza\src\pizzacomponents\orders.cpp
+1513130672 source:c:\users\johan\3vverkefni\batman\mainpizza\src\pizzacomponents\orders.cpp
 	"Orders.h"
 	<fstream>
 
@@ -441,6 +466,118 @@
 
 1513100984 c:\users\johan\3vverkefni\batman\mainpizza\include\pizzacomponents\prices.h
 
-1513108180 source:c:\users\johan\3vverkefni\batman\mainpizza\src\repositories\orderrepository.cpp
+1513130954 source:c:\users\johan\3vverkefni\batman\mainpizza\src\repositories\orderrepository.cpp
 	"OrderRepository.h"
+	<string>
+	<windows.h>
+	<dirent.h>
+	<sstream>
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\ui\mainui.h
+	<iostream>
+	"SalesUI.h"
+	"BakerUI.h"
+	"DeliveryUI.h"
+	"ManagementUI.h"
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\ui\salesui.h
+	<iostream>
+	"Pizza.h"
+	"ToppingRepository.h"
+	"OrderRepository.h"
+	"Orders.h"
+
+1513117204 c:\users\johan\nyttdrasl\batman\mainpizza\include\pizzacomponents\pizza.h
+	"Toppings.h"
+	<iostream>
+	<vector>
+
+1513104297 c:\users\johan\nyttdrasl\batman\mainpizza\include\pizzacomponents\toppings.h
+	<iostream>
+	<string.h>
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\repositories\toppingrepository.h
+	"Toppings.h"
+	<vector>
+
+1513106266 c:\users\johan\nyttdrasl\batman\mainpizza\include\repositories\orderrepository.h
+	"Orders.h"
+	<fstream>
+
+1513117582 c:\users\johan\nyttdrasl\batman\mainpizza\include\pizzacomponents\orders.h
+	"Pizza.h"
+	<vector>
+	<iostream>
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\ui\bakerui.h
+	<iostream>
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\ui\deliveryui.h
+	<iostream>
+
+1513100477 c:\users\johan\nyttdrasl\batman\mainpizza\include\ui\managementui.h
+	<iostream>
+
+1513117685 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\pizzacomponents\orders.cpp
+	"Orders.h"
+	<fstream>
+
+1513108443 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\pizzacomponents\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+	<fstream>
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\pizzacomponents\prices.cpp
+	"Prices.h"
+
+1513100984 c:\users\johan\nyttdrasl\batman\mainpizza\include\pizzacomponents\prices.h
+
+1513104310 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\pizzacomponents\toppings.cpp
+	"Toppings.h"
+	<string.h>
+	<fstream>
+
+1513115850 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\repositories\orderrepository.cpp
+	"OrderRepository.h"
+
+1513108180 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\repositories\pizzarepository.cpp
+	"PizzaRepository.h"
+	"OrderRepository.h"
+
+1513102813 c:\users\johan\nyttdrasl\batman\mainpizza\include\repositories\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+	"OrderRepository.h"
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\repositories\toppingrepository.cpp
+	"ToppingRepository.h"
+	<fstream>
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\ui\bakerui.cpp
+	"BakerUI.h"
+	"PizzaRepository.h"
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\ui\deliveryui.cpp
+	"DeliveryUI.h"
+	"PizzaRepository.h"
+
+1513100477 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\ui\mainui.cpp
+	"MainUI.h"
+
+1513108180 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\ui\managementui.cpp
+	"ManagementUI.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+
+1513118442 source:c:\users\johan\nyttdrasl\batman\mainpizza\src\ui\salesui.cpp
+	"SalesUI.h"
+	"Toppings.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+
+1513118442 pository.h"
 
