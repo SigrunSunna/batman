@@ -17,6 +17,7 @@ class Orders
         void incrementStatus();
 
         int getOrderNum();
+        Orders fetchOrder(int orderNO);
 
 
 

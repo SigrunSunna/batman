@@ -1,5 +1,6 @@
 #include "Orders.h"
 #include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -20,12 +21,33 @@ int Orders::getStatus()
     return _status;
 }
 
+Orders Orders::fetchOrder(int orderNO)
+{
+    string filename = "Orders\\";
+
+    filename = filename + to_string(orderNO);
+
+    ifstream fin;
+    fin.open(filename, ios::binary);
+    if(!fin.is_open())
+    {
+        cout << "Order not found!" << endl;
+        Orders defaulto;
+        return defaulto;
+    }
+    Orders s;
+    s.read(fin);
+    fin.close();
+
+    return s;
+}
+
 
 
 int Orders::getOrderNum()
-        {
-            return _orderNum;
-        }
+{
+    return _orderNum;
+}
 
 
 void Orders::add_number()

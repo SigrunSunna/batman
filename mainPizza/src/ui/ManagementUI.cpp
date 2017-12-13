@@ -1,10 +1,10 @@
 #include "ManagementUI.h"
 #include "PizzaRepository.h"
 #include "ToppingRepository.h"
+#include "Orders.h"
 
 void ManagementUI::Management()
 {
-
     ToppingRepository toppingRepo;
     char inp = '\0';
     while(inp != 'q')
@@ -13,6 +13,7 @@ void ManagementUI::Management()
         cout << "t: add toppings" << endl;
         cout << "v: view orders" << endl;
         cout << "c: change pizza prices" << endl;
+        cout << "r: retrieve a specific order." << endl;
         cout << "q: quit " << endl;
         cout << "-> ";
         cin >> inp;
@@ -44,14 +45,10 @@ void ManagementUI::Management()
                 }
             }
             toppingRepo.storeAllToppings(toppings);
-
-
         }
         if(inp == 'c')
         {
-
             {
-
                 int smallPrice, mediumPrice, largePrice;
 
 
@@ -60,8 +57,6 @@ void ManagementUI::Management()
                 fin.read((char*)(&smallPrice), sizeof(int));
                 fin.read((char*)(&mediumPrice), sizeof(int));
                 fin.read((char*)(&largePrice), sizeof(int));
-
-
 
                 cout << "currently the price of a small pizza is: " << smallPrice << endl;
                 cout << "Please set a price for a small pizza: " << endl;
@@ -80,10 +75,21 @@ void ManagementUI::Management()
                 fout.write((char*)(&mediumPrice), sizeof(int));
                 fout.write((char*)(&largePrice), sizeof(int));
 
-
-
                 fout.close();
             }
+
+        }
+        if(inp == 'r')
+        {
+            int ordInp;
+
+            cout << "What order would you like to pull?" << endl;
+            cin >> ordInp;
+
+            Orders b;
+
+           cout << b.fetchOrder(ordInp);
+
 
         }
     }
