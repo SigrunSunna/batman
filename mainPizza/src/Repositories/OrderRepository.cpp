@@ -31,19 +31,8 @@ void OrderRepository::storeOrder(const Orders& o)
 
     fout.close();
 }
-Orders OrderRepository::retrieveOrder()
-{
-    ifstream fin;
-    fin.open("Orders.dat", ios::binary);
-    cout << "retrieveOrder" << endl;
 
-    Orders s;
-    s.read(fin);
 
-    fin.close();
-
-    return s;
-}
 
 
 Orders OrderRepository::getstatusNull()
@@ -104,9 +93,6 @@ void OrderRepository::retrieveALL()
         while ((ent = readdir (dir)) != NULL)
         {
             stringstream ss;
-            // if ( ent->d_type == isFile)
-            //{
-            cout << "Fengum: " << ent->d_name << endl;
             if (ent->d_name[0] != '.')
             {
 
@@ -119,45 +105,10 @@ void OrderRepository::retrieveALL()
                 fin.close();
 
             }
-            // }
         }
         closedir (dir);
     }
 
-    /*ifstream fin;
-    fin.open("Orders\\", ios::binary);
-    while(!fin.eof())
-    {
-    if (ent->d_name[0] != '.')
-    {
-        Orders s;
-        s.read(fin);
-        if(fin.eof())
-        {
-            break;
-        }
-        cout << s;
-        cout << "----------------------" << endl;
-        }
-
-    }*/
-
 }
-/*void OrderRepository::retrieveALL()
-{
-    ifstream fin;
-    fin.open("Orders.dat", ios::binary);
 
-
-    while(!fin.eof())
-    {
-        Orders s;
-        s = retrieveOrder();
-        s.read(fin);
-        cout << s;
-        cout << "----------------------" << endl;
-    }
-    fin.close();
-
-}*/
 

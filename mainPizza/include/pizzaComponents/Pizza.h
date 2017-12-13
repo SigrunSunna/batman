@@ -10,8 +10,10 @@ class Pizza
 {
     public:
         Pizza();
+        Pizza(int size);
         virtual ~Pizza();
         void addTopping(Toppings topping);
+        void basePrice(int sizeofPizza);
 
         void write(ofstream& fout) const;
         void read(ifstream& fin);
@@ -23,6 +25,7 @@ class Pizza
     private:
         vector<Toppings> toppings;
         double _price;
+        int _pizza_Size;   // Can be 1, 2 or 3 for small medium and large.
 
 };
 

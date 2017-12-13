@@ -17,6 +17,8 @@ void SalesUI::Sales()
 
         if(selection == 'm')
         {
+
+            int psize;
                 Orders order;
                 order.add_number();
                 char selection = 'y';
@@ -24,7 +26,25 @@ void SalesUI::Sales()
                 {
                     vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
 
-                    Pizza p;
+                    cout << "Please enter the size of the pizza, s: small, m: medium, l: large " << endl;
+                    char sizeInput;
+                    cin >> sizeInput;
+                    switch(sizeInput)
+                    {
+                    case 's': psize = 1;
+                        break;
+                    case 'm': psize = 2;
+                        break;
+                    case 'l': psize = 3;
+                        break;
+                    default:   cout << "invalid input using medium. " << endl;
+                            psize = 2;
+
+                    }
+                    Pizza p(psize);
+
+
+
 
                     int toppingSelection = -1;
                     while(toppingSelection != 0)
@@ -52,10 +72,7 @@ void SalesUI::Sales()
         if(selection == 'r')
         {
             OrderRepository orderRepo;
-            Orders order = orderRepo.retrieveOrder();
-            cout << order;
-
-            cout << endl;
+            orderRepo.retrieveALL();
         }
 
 

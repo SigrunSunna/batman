@@ -2,7 +2,9 @@
 
 Prices::Prices()
 {
-    //ctor
+
+
+
 }
 
 Prices::~Prices()

@@ -6,11 +6,8 @@ using namespace std;
 Orders::Orders()
 {
     _price = 0;
-
     _status = 0;
-     _orderNum = 0;
-
-
+    _orderNum = 0;
 }
 
 Orders::~Orders()

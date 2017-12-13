@@ -8,10 +8,7 @@ class Prices
         Prices();
         virtual ~Prices();
 
-        double totalPrice()
-        {
 
-        }
 
 
 

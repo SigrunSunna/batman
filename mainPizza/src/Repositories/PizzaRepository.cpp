@@ -15,13 +15,13 @@ void PizzaRepository::storePizza(const Pizza& p)
 {
 
     ofstream fout;
-    cout << "Er ad bua til skra" << endl;
     fout.open("Pizza.dat", ios::binary | ios::app);
 
     p.write(fout);
 
     fout.close();
 }
+
 Orders PizzaRepository::retrievePizza()
 {
     ifstream fin;
