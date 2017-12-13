@@ -8,6 +8,8 @@ Orders::Orders()
     _price = 0;
 
     _status = 0;
+     _orderNum = 0;
+
 
 }
 

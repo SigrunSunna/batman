@@ -64,6 +64,8 @@ Orders OrderRepository::getstatusNull()
             stringstream ss;
 
 
+            if(ent->d_name[0] !=  '.')
+            {
 
                 ss << "Orders\\" << ent->d_name;
                 fin.open(ss.str(), ios::binary);
@@ -76,6 +78,8 @@ Orders OrderRepository::getstatusNull()
                     return s;
                 }
                 fin.close();
+
+            }
 
         }
         closedir (dir);
@@ -100,7 +104,7 @@ void OrderRepository::retrieveALL()
         while ((ent = readdir (dir)) != NULL)
         {
             stringstream ss;
-           // if ( ent->d_type == isFile)
+            // if ( ent->d_type == isFile)
             //{
             cout << "Fengum: " << ent->d_name << endl;
             if (ent->d_name[0] != '.')
@@ -115,7 +119,7 @@ void OrderRepository::retrieveALL()
                 fin.close();
 
             }
-           // }
+            // }
         }
         closedir (dir);
     }
@@ -123,6 +127,8 @@ void OrderRepository::retrieveALL()
     /*ifstream fin;
     fin.open("Orders\\", ios::binary);
     while(!fin.eof())
+    {
+    if (ent->d_name[0] != '.')
     {
         Orders s;
         s.read(fin);
@@ -132,10 +138,11 @@ void OrderRepository::retrieveALL()
         }
         cout << s;
         cout << "----------------------" << endl;
+        }
 
     }*/
 
- }
+}
 /*void OrderRepository::retrieveALL()
 {
     ifstream fin;
