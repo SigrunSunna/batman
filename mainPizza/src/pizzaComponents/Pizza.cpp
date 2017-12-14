@@ -22,7 +22,9 @@ void Pizza::basePrice(int sizeofPizza)
 
     _pizza_Size = sizeofPizza;
 
-    int smallPrice, mediumPrice, largePrice;
+    int smallPrice = 0;
+    int mediumPrice = 0;
+    int largePrice = 0;
 
     ifstream fin;
     fin.open("pizzaPrice.dat", ios::binary);

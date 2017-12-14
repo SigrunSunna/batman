@@ -10,10 +10,13 @@ void SalesUI::Sales()
     char selection = '\0';
     while(selection != 'q')
     {
+        cout << endl;
         cout << "m: make order" << endl;
         cout << "r: read order" << endl;
         cout << "q: quit" << endl;
+        cout << "-> ";
         cin >> selection;
+        cout << endl;
 
         if(selection == 'm')
         {
@@ -62,7 +65,7 @@ void SalesUI::Sales()
                         }
                     }
                     order.addPizza(p);
-                    cout << "Would you like to add another pizza?: " << endl;
+                    cout << "Would you like to add another pizza? (y/n): " << endl;
                     cin >> selection;
                 }
                 OrderRepository orderRepo;

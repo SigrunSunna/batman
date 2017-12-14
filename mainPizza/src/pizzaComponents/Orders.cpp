@@ -125,16 +125,16 @@ void Orders::read(ifstream& fin)
 
 ostream& operator << (ostream& out, const Orders& o)
 {
-    out << "Order No. " << o._orderNum <<endl;
+    out << endl << "-----------------------" << endl;
+    out << "Order No. " << o._orderNum << endl << endl;
     //out << p.toppingCount << " ";
     for(unsigned int i = 0; i < o.pizzas.size(); i++)
     {
-        out << o.pizzas[i] <<  endl;
+        out << o.pizzas[i] <<  endl << endl;
     }
 
     out << endl << "Total price of order: " << o._price << endl;
-
-    out << "Status: ";
+    out << "Status: " << endl;
 
     switch(o._status)
     {

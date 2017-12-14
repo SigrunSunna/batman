@@ -586,3 +586,118 @@
 
 1513118442 pository.h"
 
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\ui\mainui.h
+	<iostream>
+	"SalesUI.h"
+	"BakerUI.h"
+	"DeliveryUI.h"
+	"ManagementUI.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\ui\salesui.h
+	<iostream>
+	"Pizza.h"
+	"ToppingRepository.h"
+	"OrderRepository.h"
+	"Orders.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\pizzacomponents\pizza.h
+	"Toppings.h"
+	<iostream>
+	<vector>
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\pizzacomponents\toppings.h
+	<iostream>
+	<string.h>
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\repositories\toppingrepository.h
+	"Toppings.h"
+	<vector>
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\repositories\orderrepository.h
+	"Orders.h"
+	<fstream>
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\pizzacomponents\orders.h
+	"Pizza.h"
+	<vector>
+	<iostream>
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\ui\bakerui.h
+	<iostream>
+	"Orders.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\ui\deliveryui.h
+	<iostream>
+	"Orders.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\ui\managementui.h
+	<iostream>
+
+1513267643 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\pizzacomponents\orders.cpp
+	"Orders.h"
+	<fstream>
+	<string>
+
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\pizzacomponents\prices.cpp
+	"Prices.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\pizzacomponents\prices.h
+
+1513270147 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\pizzacomponents\toppings.cpp
+	"Toppings.h"
+	<string.h>
+	<fstream>
+
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\repositories\orderrepository.cpp
+	"OrderRepository.h"
+	<string>
+	<windows.h>
+	<dirent.h>
+	<sstream>
+
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\repositories\pizzarepository.cpp
+	"PizzaRepository.h"
+	"OrderRepository.h"
+
+1513263469 c:\users\sigrún suna\desktop\okei\batman\mainpizza\include\repositories\pizzarepository.h
+	"Pizza.h"
+	<fstream>
+	"OrderRepository.h"
+
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\repositories\toppingrepository.cpp
+	"ToppingRepository.h"
+	<fstream>
+
+1513268051 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\ui\bakerui.cpp
+	"BakerUI.h"
+	"PizzaRepository.h"
+
+1513270459 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\ui\deliveryui.cpp
+	"DeliveryUI.h"
+	"PizzaRepository.h"
+
+1513263470 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\ui\mainui.cpp
+	"MainUI.h"
+
+1513266440 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\ui\managementui.cpp
+	"ManagementUI.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+	"Orders.h"
+
+1513267787 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\ui\salesui.cpp
+	"SalesUI.h"
+	"Toppings.h"
+	"PizzaRepository.h"
+	"ToppingRepository.h"
+
+1513267337 source:c:\users\sigrún suna\desktop\okei\batman\mainpizza\src\pizzacomponents\pizza.cpp
+	"Pizza.h"
+	<stddef.h>
+	<fstream>
+	<cstdlib>
+

@@ -66,7 +66,7 @@ istream& operator >> (istream& in, Toppings& top)
 
 ostream& operator << (ostream& out, const Toppings& top)
 {
-    out << "Topping:  " << top._name << " ";
-    out << "Price:    " << top._price;
+    out << "Topping:  " << top._name << " " ;
+    out << "Price:\t "<< top._price;
     return out;
 }

@@ -6,14 +6,18 @@ void DeliveryUI::Delivery()
     char inp = '\0';
     while(inp != 'q')
     {
-        cout << "Hello Delivery Person, would you like to:" << endl;
-        cout << "v: view orders, m: mark as ready, p: mark pizza as paid q: quit?: ";
+        cout << endl << "Hello Delivery Person, would you like to:" << endl;
+        cout << "v: view orders" << endl;
+        cout << "m: mark as ready" << endl;
+        cout << "p: mark pizza as paid" << endl;
+        cout << "q: quit";
+        cout << "-> ";
         cin >> inp;
              if (inp == 'v')
         {
 
-            PizzaRepository pizzaRepo;
-            pizzaRepo.retrieveALL();
+            OrderRepository orderRepo;
+            orderRepo.retrieveALL();
         }
 
          if (inp == 'm')

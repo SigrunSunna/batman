@@ -9,7 +9,7 @@ void ManagementUI::Management()
     char inp = '\0';
     while(inp != 'q')
     {
-        cout << "Hello Manager, would you like to:" << endl;
+        cout << endl << "Hello Manager, would you like to:" << endl;
         cout << "t: add toppings" << endl;
         cout << "v: view orders" << endl;
         cout << "c: change pizza prices" << endl;
@@ -49,7 +49,9 @@ void ManagementUI::Management()
         if(inp == 'c')
         {
             {
-                int smallPrice, mediumPrice, largePrice;
+                int smallPrice = 0;
+                int mediumPrice = 0;
+                int largePrice = 0;
 
 
                 ifstream fin;
@@ -59,13 +61,15 @@ void ManagementUI::Management()
                 fin.read((char*)(&largePrice), sizeof(int));
 
                 cout << "currently the price of a small pizza is: " << smallPrice << endl;
-                cout << "Please set a price for a small pizza: " << endl;
+                cout << "Please set a price for a small pizza: ";
                 cin >> smallPrice;
+                cout << endl;
                 cout << "currently the price of a medium pizza is: " << mediumPrice << endl;
-                cout << "Please set a price for a mediun pizza: " << endl;
+                cout << "Please set a price for a mediun pizza: ";
                 cin >> mediumPrice;
+                cout << endl;
                 cout << "currently the price of a large pizza is: " << largePrice << endl;
-                cout << "Please set a price for a large pizza: " << endl;
+                cout << "Please set a price for a large pizza: ";
                 cin >> largePrice;
                 fin.close();
 
