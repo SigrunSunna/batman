@@ -132,12 +132,28 @@ ostream& operator << (ostream& out, const Orders& o)
         out << o.pizzas[i] <<  endl;
     }
 
-
-
-    out << "Status: " << o._status << endl;
-
-
     out << endl << "Total price of order: " << o._price << endl;
+
+    out << "Status: ";
+
+    switch(o._status)
+    {
+    case 0:
+        out << "New order " << endl;
+        break;
+    case 1:
+        out << "Order started" << endl;
+        break;
+    case 2:
+        out << "Order ready" << endl;
+        break;
+    case 3:
+        out << "Order delivered and paid" << endl;
+        break;
+    }
+
+
+
 
     return out;
 }

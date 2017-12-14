@@ -25,7 +25,7 @@ void BakerUI::Baker()
 
             OrderRepository orderRepo;
             Orders order;
-            order = orderRepo.getstatusNull();
+            order = orderRepo.getstatus(0);
             if (order.getOrderNum() != 0)
             {
                 baker.changeStatus(order);
@@ -44,6 +44,4 @@ void BakerUI::changeStatus(Orders order)
     order.incrementStatus();
     OrderRepository orderbake;
     orderbake.storeOrder(order);
-
-
 }

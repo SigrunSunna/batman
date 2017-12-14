@@ -32,10 +32,7 @@ void Pizza::basePrice(int sizeofPizza)
         exit(EXIT_FAILURE);
     }
     fin.read((char*)(&smallPrice), sizeof(int));
-    cout << "Size: " << sizeofPizza << endl;
-    cout << "small price: " << smallPrice <<endl;
     fin.read((char*)(&mediumPrice), sizeof(int));
-    cout << "medium price: " << mediumPrice <<endl;
     fin.read((char*)(&largePrice), sizeof(int));
     fin.close();
 
@@ -52,8 +49,6 @@ void Pizza::basePrice(int sizeofPizza)
         break;
     }
 
-    cout << "Verdid er: " << _price << endl;
-
 }
 
 
@@ -64,9 +59,7 @@ Pizza::~Pizza()
 void Pizza::addTopping(Toppings topping)
 {
     toppings.push_back(topping);
-    cout << "Verdid er nuna" << _price<<endl;
     _price += topping.getPrice();
-    cout << "Verdid eftir toppings" << _price<<endl;
 }
 
 void Pizza::write(ofstream& fout) const

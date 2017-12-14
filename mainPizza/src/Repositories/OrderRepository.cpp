@@ -35,7 +35,7 @@ void OrderRepository::storeOrder(const Orders& o)
 
 
 
-Orders OrderRepository::getstatusNull()
+Orders OrderRepository::getstatus(int status)
 {
 
 
@@ -60,7 +60,7 @@ Orders OrderRepository::getstatusNull()
                 fin.open(ss.str(), ios::binary);
                 Orders s;
                 s.read(fin);
-                if(s.getStatus() == 0)
+                if(s.getStatus() == status)
                 {
                     fin.close();
                     closedir (dir);
