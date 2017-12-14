@@ -14,7 +14,7 @@ class OrderRepository
         void retrieveStatus(int status);
 
         Orders getstatus(int status);
-
+        Orders fetchOrder(int orderNO);
 
         void storeOrder(const Orders& o);
         Orders retrieveOrder();

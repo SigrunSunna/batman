@@ -13,6 +13,7 @@ class PizzaRepository
         virtual ~PizzaRepository();
 
         void storePizza(const Pizza& p);
+        void setSize();
         Orders retrievePizza();
 
         void retrieveALL();

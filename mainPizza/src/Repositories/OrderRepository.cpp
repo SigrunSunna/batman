@@ -148,4 +148,25 @@ void OrderRepository::retrieveStatus(int status)
 
 }
 
+Orders OrderRepository::fetchOrder(int orderNO)
+{
+    string filename = "Orders\\";
+
+    filename = filename + to_string(orderNO);
+
+    ifstream fin;
+    fin.open(filename, ios::binary);
+    if(!fin.is_open())
+    {
+        cout << " Order not found!" << endl;
+        Orders defaulto;
+        return defaulto;
+    }
+    Orders s;
+    s.read(fin);
+    fin.close();
+
+    return s;
+}
+
 

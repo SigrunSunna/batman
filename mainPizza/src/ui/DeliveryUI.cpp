@@ -1,9 +1,11 @@
 #include "DeliveryUI.h"
 #include "PizzaRepository.h"
 #include <stdlib.h>
+#include "Delivery_services.h"
 
 void DeliveryUI::Delivery()
 {
+    Delivery_services service;
     char inp = '\0';
     while(inp != 'q')
     {
@@ -16,54 +18,25 @@ void DeliveryUI::Delivery()
         cout << " -> ";
         cin >> inp;
         system("CLS");
-             if (inp == 'v')
+        if (inp == 'v')
         {
-
-            OrderRepository orderRepo;
-            orderRepo.retrieveStatus(1);
-            orderRepo.retrieveStatus(2);
+            service.viewOrders();
         }
 
-         if (inp == 'm')
+        if (inp == 'm')
         {
-            DeliveryUI cashier;
-
-            OrderRepository orderRepo;
-            Orders order;
-            order = orderRepo.getstatus(1);
-            if (order.getOrderNum() != 0)
-            {
-                cashier.changeStatus(order);
-            }
-
+            ///marks order as ready
+            service.mark(1);
         }
 
-          if (inp == 'p')
+        if (inp == 'p')
         {
-            DeliveryUI cashier;
-
-            OrderRepository orderRepo;
-            Orders order;
-            order = orderRepo.getstatus(2);
-            if (order.getOrderNum() != 0)
-            {
-                cashier.changeStatus(order);
-            }
-
+            ///marks order as paid
+            service.mark(2);
         }
 
     }
 }
 
-
-
-void DeliveryUI::changeStatus(Orders order)
-{
-    cout << order;
-
-    order.incrementStatus();
-    OrderRepository orderReady;
-    orderReady.storeOrder(order);
-}
 
 

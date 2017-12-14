@@ -1,12 +1,11 @@
 #include "BakerUI.h"
 #include "PizzaRepository.h"
 #include <stdlib.h>
-
-
-
+#include "Baker_services.h"
 
 void BakerUI::Baker()
 {
+    Baker_services service;
     char inp = '\0';
     while(inp != 'q')
     {
@@ -21,33 +20,11 @@ void BakerUI::Baker()
         cout << endl;
         if (inp == 'v')
         {
-
-            OrderRepository orderRepo;
-            orderRepo.retrieveStatus(0);
+            service.viewOrders();
         }
         if (inp == 'b')
         {
-            BakerUI baker;
-
-            OrderRepository orderRepo;
-            Orders order;
-            order = orderRepo.getstatus(0);
-            if (order.getOrderNum() != 0)
-            {
-                baker.changeStatus(order);
-            }
-
+            service.bake();
         }
-
     }
-}
-
-
-void BakerUI::changeStatus(Orders order)
-{
-    cout << order;
-
-    order.incrementStatus();
-    OrderRepository orderbake;
-    orderbake.storeOrder(order);
 }

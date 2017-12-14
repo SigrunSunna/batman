@@ -3,13 +3,16 @@
 #include "PizzaRepository.h"
 #include "ToppingRepository.h"
 #include <stdlib.h>
+#include "InvalidCharInput.h"
+#include "Sales_services.h"
 
 using namespace std;
 
 void SalesUI::Sales()
 {
-    char selection = '\0';
-    while(selection != 'q')
+    Sales_services service;
+    char input = '\0';
+    while(input != 'q')
     {
         cout << endl;
         cout << " Hello salesperson, would you like to: " << endl;
@@ -17,82 +20,45 @@ void SalesUI::Sales()
         cout << " r: read order" << endl;
         cout << " q: quit" << endl;
         cout << " -> ";
-        cin >> selection;
-        system("CLS");
+        try {
+            cin >> input;
+            system("CLS");
 
-        if(selection == 'm')
-        {
+            if(input == 'm')
+            {
 
-            int psize;
+                int psize;
                 Orders order;
                 order.add_number();
-                char selection = 'y';
-                while(selection == 'y')
+                char input = 'y';
+                while(input == 'y')
                 {
-                    vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
-
-                    cout << endl;
-                    cout << " Please enter the size of the pizza, s: small, m: medium, l: large " << endl;
-                    cout << " -> ";
-                    char sizeInput;
-                    cin >> sizeInput;
-                    system("CLS");
-                    switch(sizeInput)
-                    {
-                    case 's': psize = 1;
-                        break;
-                    case 'm': psize = 2;
-                        break;
-                    case 'l': psize = 3;
-                        break;
-                    default:   cout << " Invalid input, using medium. " << endl;
-                            psize = 2;
-
-                    }
+                    service.sizeChoice(psize);
                     Pizza p(psize);
+                    service.toppingChoice(p);
 
-
-
-
-                    int toppingSelection = -1;
-                    while(toppingSelection != 0)
-                    {
-                        cout << endl;
-                        cout << " Please enter id for toppings to add (0 for no more)" << endl;
-
-                        for(unsigned int i = 0; i < toppings.size(); i++)
-                        {
-                            cout << " [" << i + 1 << "] " << toppings[i] << endl;
-                        }
-                        cout << " -> ";
-                        cin >> toppingSelection;
-                        system("CLS");
-                        if(toppingSelection > 0 && toppingSelection <= (int)toppings.size())
-                        {
-                            p.addTopping(toppings[toppingSelection - 1]);
-                        }
-                    }
                     order.addPizza(p);
                     cout << endl;
-                    cout << " Would you like to add another pizza? (y/n): " << endl;
+                    cout << " Would you like to add another pizza?" << endl;
+                    cout << " yes: y" << endl;
+                    cout << " no: any other key: " << endl;
                     cout << " -> ";
-                    cin >> selection;
+                    cin >> input;
                     system("CLS");
                 }
-                OrderRepository orderRepo;
-                orderRepo.storeOrder(order);
+                service.storeOrder(order);
+            }
+            if(input == 'r')
+            {
+                service.retrieveAllOrders();
+            }
+            if(input != 'm' && input != 'r' && input != 'q') throw InvalidCharInput();
+            if(!isalpha(input)) throw InvalidCharInput();
         }
-        if(selection == 'r')
-        {
-            OrderRepository orderRepo;
-            orderRepo.retrieveALL();
-        }
-
-
-        if(selection != 'm' && selection != 'r' && selection != 'q')
+        catch(InvalidCharInput a)
         {
             cout << endl;
-            cout << " Wrong selection!, please choose again." << endl;
+            cout << " Wrong input!, please choose again." << endl;
             cout << endl;
         }
     }

@@ -12,8 +12,6 @@ class SalesUI
 {
     public:
         void Sales();
-        ToppingRepository toppingRepo;
-
 };
 
 #endif // SALESUI_H

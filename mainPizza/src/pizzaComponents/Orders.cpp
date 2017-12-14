@@ -21,7 +21,7 @@ int Orders::getStatus()
     return _status;
 }
 
-Orders Orders::fetchOrder(int orderNO)
+/*Orders Orders::fetchOrder(int orderNO)
 {
     string filename = "Orders\\";
 
@@ -40,7 +40,7 @@ Orders Orders::fetchOrder(int orderNO)
     fin.close();
 
     return s;
-}
+}*/
 
 
 
