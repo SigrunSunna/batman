@@ -19,7 +19,8 @@ void DeliveryUI::Delivery()
         {
 
             OrderRepository orderRepo;
-            orderRepo.retrieveALL();
+            orderRepo.retrieveStatus(1);
+            orderRepo.retrieveStatus(2);
         }
 
          if (inp == 'm')

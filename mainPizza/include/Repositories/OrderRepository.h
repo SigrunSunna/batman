@@ -11,6 +11,7 @@ class OrderRepository
         OrderRepository();
         virtual ~OrderRepository();
         void retrieveALL();
+        void retrieveStatus(int status);
 
         Orders getstatus(int status);
 
