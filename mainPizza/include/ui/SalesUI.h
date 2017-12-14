@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Pizza.h"
 #include "ToppingRepository.h"
+#include "SidesRepository.h"
 #include "OrderRepository.h"
 #include "Orders.h"
 
@@ -13,6 +14,8 @@ class SalesUI
     public:
         void Sales();
         ToppingRepository toppingRepo;
+        SidesRepository sideRepo;
+        void changeStatus(Orders order);
 
 };
 

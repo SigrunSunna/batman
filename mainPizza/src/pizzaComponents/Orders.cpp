@@ -92,16 +92,31 @@ void Orders::addPizza(Pizza p)
 
 }
 
+
+void Orders::addSides(Sides s)
+{
+    sides.push_back(s);
+    _price += s.getPrice();
+
+}
+
+
 void Orders::write(ofstream& fout) const
 {
     fout.write((char*)(&_orderNum), sizeof(int));
     int pCount = pizzas.size();
+    int sCount = sides.size();
     fout.write((char*)(&pCount), sizeof(int));
+    fout.write((char*)(&sCount), sizeof(int));
     fout.write((char*)(&_status), sizeof(int));
 
     for(int i = 0; i < pCount; i++)
     {
         pizzas[i].write(fout);
+    }
+    for(int i = 0; i < sCount; i++)
+    {
+        sides[i].write(fout);
     }
 }
 void Orders::read(ifstream& fin)
@@ -109,6 +124,8 @@ void Orders::read(ifstream& fin)
     fin.read((char*)(&_orderNum), sizeof(int));
     int pCount;
     fin.read((char*)(&pCount), sizeof(int));
+    int sCount;
+    fin.read((char*)(&sCount), sizeof(int));
     fin.read((char*)(&_status), sizeof(int));
 
     for(int i = 0; i < pCount; i++)
@@ -121,6 +138,16 @@ void Orders::read(ifstream& fin)
         pizza.read(fin);
         addPizza(pizza);
     }
+    for(int i = 0; i < sCount; i++)
+    {
+        Sides side;
+        if(fin.eof())
+        {
+            break;
+        }
+        side.read(fin);
+        addSides(side);
+    }
 }
 
 ostream& operator << (ostream& out, const Orders& o)
@@ -132,6 +159,12 @@ ostream& operator << (ostream& out, const Orders& o)
     {
         out << o.pizzas[i] <<  endl << endl;
     }
+
+     for(unsigned int i = 0; i < o.sides.size(); i++)
+    {
+        out << o.sides[i] <<  endl;
+    }
+
 
     out << endl << " Total price of order: " << o._price << endl;
     out << " Status: " << endl;
@@ -168,5 +201,12 @@ istream& operator >> (istream& in, Orders& o)
         in >> pizza;
         o.addPizza(pizza);
     }
+    Sides side;
+    for(unsigned int i = 0; i < o.sides.size()-1; i++)
+    {
+        in >> side;
+        o.addSides(side);
+    }
+
     return in;
 }

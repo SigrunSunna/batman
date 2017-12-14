@@ -1,6 +1,7 @@
 #ifndef ORDERS_H
 #define ORDERS_H
 #include "Pizza.h"
+#include "Sides.h"
 #include <vector>
 #include <iostream>
 
@@ -14,6 +15,7 @@ class Orders
         Orders();
         virtual ~Orders();
         void addPizza(Pizza p);
+        void addSides(Sides s);
         void incrementStatus();
 
         int getOrderNum();
@@ -33,6 +35,7 @@ class Orders
     private:
 
         vector<Pizza> pizzas;
+        vector<Sides> sides;
         double _price;
 
         int _status;

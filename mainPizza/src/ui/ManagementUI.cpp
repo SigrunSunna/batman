@@ -1,17 +1,20 @@
 #include "ManagementUI.h"
 #include "PizzaRepository.h"
 #include "ToppingRepository.h"
+#include "SidesRepository.h"
 #include "Orders.h"
 #include <stdlib.h>
 
 void ManagementUI::Management()
 {
     ToppingRepository toppingRepo;
+    SidesRepository sidesRepo;
     char inp = '\0';
     while(inp != 'q')
     {
         cout << endl << " Hello Manager, would you like to:" << endl;
         cout << " t: add toppings" << endl;
+        cout << " o: add other products" << endl;
         cout << " v: view orders" << endl;
         cout << " c: change pizza prices" << endl;
         cout << " r: retrieve a specific order." << endl;
@@ -51,6 +54,38 @@ void ManagementUI::Management()
             }
             toppingRepo.storeAllToppings(toppings);
         }
+
+        if(inp == 'o')
+        {
+            vector<Sides> sides = sidesRepo.retrieveAllSides();
+            cout << endl;
+            cout << " These are the current sides in the system: " << endl;
+            for(unsigned int i = 0; i < sides.size(); i++)
+            {
+                cout << " [" << i + 1 << "] " << sides[i] << endl;
+            }
+            cout << endl;
+
+            char selection = 'y';
+            Sides s;
+            while(selection == 'y')
+            {
+                cout << " Add another side (y)?: ";
+                cin >> selection;
+                system("CLS");
+                if(selection == 'y')
+                {
+                    cin >> s;
+                    system("CLS");
+                    sides.push_back(s);
+                }
+            }
+            sidesRepo.storeAllSides(sides);
+        }
+
+
+
+
         if(inp == 'c')
         {
             {
