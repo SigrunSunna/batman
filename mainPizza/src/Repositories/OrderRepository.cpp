@@ -111,4 +111,41 @@ void OrderRepository::retrieveALL()
 
 }
 
+void OrderRepository::retrieveStatus(int status)
+{
+    ifstream fin;
+    stringstream ss;
+
+    DIR *dir;
+    struct dirent *ent;
+    if ((dir = opendir ("Orders/")) != NULL)
+    {
+        /* print all the files and directories within directory */
+        while ((ent = readdir (dir)) != NULL)
+        {
+            stringstream ss;
+            if (ent->d_name[0] != '.')
+            {
+                Orders s;
+
+                ss << "Orders/" << ent->d_name;
+                fin.open(ss.str(), ios::binary);
+
+                s.read(fin);
+                 if (s.getStatus() == status)
+                {
+                cout << s;
+                cout << "----------------------" << endl;
+                }
+
+                fin.close();
+
+
+            }
+        }
+        closedir (dir);
+    }
+
+}
+
 

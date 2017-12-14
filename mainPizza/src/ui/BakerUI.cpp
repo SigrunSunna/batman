@@ -23,7 +23,7 @@ void BakerUI::Baker()
         {
 
             OrderRepository orderRepo;
-            orderRepo.retrieveALL();
+            orderRepo.retrieveStatus(0);
         }
         if (inp == 'b')
         {
