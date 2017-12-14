@@ -31,7 +31,7 @@ Orders Orders::fetchOrder(int orderNO)
     fin.open(filename, ios::binary);
     if(!fin.is_open())
     {
-        cout << "Order not found!" << endl;
+        cout << " Order not found!" << endl;
         Orders defaulto;
         return defaulto;
     }
@@ -126,29 +126,29 @@ void Orders::read(ifstream& fin)
 ostream& operator << (ostream& out, const Orders& o)
 {
     out << endl << "-----------------------" << endl;
-    out << "Order No. " << o._orderNum << endl << endl;
+    out << " Order No. " << o._orderNum << endl << endl;
     //out << p.toppingCount << " ";
     for(unsigned int i = 0; i < o.pizzas.size(); i++)
     {
         out << o.pizzas[i] <<  endl << endl;
     }
 
-    out << endl << "Total price of order: " << o._price << endl;
-    out << "Status: " << endl;
+    out << endl << " Total price of order: " << o._price << endl;
+    out << " Status: " << endl;
 
     switch(o._status)
     {
     case 0:
-        out << "New order " << endl;
+        out << " New order " << endl;
         break;
     case 1:
-        out << "Order started" << endl;
+        out << " Order started" << endl;
         break;
     case 2:
-        out << "Order ready" << endl;
+        out << " Order ready" << endl;
         break;
     case 3:
-        out << "Order delivered and paid" << endl;
+        out << " Order delivered and paid" << endl;
         break;
     }
 

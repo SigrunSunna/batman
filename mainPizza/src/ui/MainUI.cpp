@@ -1,13 +1,17 @@
 #include "MainUI.h"
+#include <stdlib.h>
 
 void MainUI::startUI()
 {
     char input = '\0';
     while(input != 'q')
     {
-        cout << "What is your position?" << endl;
-        cout << "Manager = m, Sales = s, Baker = b, Delivery = d, quit = q: ";
+        cout << endl;
+        cout << " What is your position?" << endl;
+        cout << " Manager = m, Sales = s, Baker = b, Delivery = d, quit = q: " << endl;
+        cout << " -> ";
         cin >> input;
+        system("CLS");
         if(input == 'm')
         {
             manager.Management();
@@ -27,7 +31,7 @@ void MainUI::startUI()
         if(input != 'm' && input != 's' && input != 'b' && input != 'd' && input != 'q')
         {
             cout << endl;
-            cout << "Wrong input!, please choose again." << endl;
+            cout << " Wrong input!, please choose again." << endl;
             cout << endl;
         }
     }

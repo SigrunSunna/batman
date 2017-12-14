@@ -2,6 +2,7 @@
 #include "Toppings.h"
 #include "PizzaRepository.h"
 #include "ToppingRepository.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -11,12 +12,13 @@ void SalesUI::Sales()
     while(selection != 'q')
     {
         cout << endl;
-        cout << "m: make order" << endl;
-        cout << "r: read order" << endl;
-        cout << "q: quit" << endl;
-        cout << "-> ";
+        cout << " Hello salesperson, would you like to: " << endl;
+        cout << " m: make order" << endl;
+        cout << " r: read order" << endl;
+        cout << " q: quit" << endl;
+        cout << " -> ";
         cin >> selection;
-        cout << endl;
+        system("CLS");
 
         if(selection == 'm')
         {
@@ -29,9 +31,12 @@ void SalesUI::Sales()
                 {
                     vector<Toppings> toppings = toppingRepo.retrieveAllToppings();
 
-                    cout << "Please enter the size of the pizza, s: small, m: medium, l: large " << endl;
+                    cout << endl;
+                    cout << " Please enter the size of the pizza, s: small, m: medium, l: large " << endl;
+                    cout << " -> ";
                     char sizeInput;
                     cin >> sizeInput;
+                    system("CLS");
                     switch(sizeInput)
                     {
                     case 's': psize = 1;
@@ -40,7 +45,7 @@ void SalesUI::Sales()
                         break;
                     case 'l': psize = 3;
                         break;
-                    default:   cout << "invalid input using medium. " << endl;
+                    default:   cout << " Invalid input, using medium. " << endl;
                             psize = 2;
 
                     }
@@ -52,25 +57,30 @@ void SalesUI::Sales()
                     int toppingSelection = -1;
                     while(toppingSelection != 0)
                     {
-                        cout << "Please enter id for toppings to add (0 for no more)" << endl;
+                        cout << endl;
+                        cout << " Please enter id for toppings to add (0 for no more)" << endl;
 
                         for(unsigned int i = 0; i < toppings.size(); i++)
                         {
-                            cout << "[" << i + 1 << "] " << toppings[i] << endl;
+                            cout << " [" << i + 1 << "] " << toppings[i] << endl;
                         }
+                        cout << " -> ";
                         cin >> toppingSelection;
+                        system("CLS");
                         if(toppingSelection > 0 && toppingSelection <= (int)toppings.size())
                         {
                             p.addTopping(toppings[toppingSelection - 1]);
                         }
                     }
                     order.addPizza(p);
-                    cout << "Would you like to add another pizza? (y/n): " << endl;
+                    cout << endl;
+                    cout << " Would you like to add another pizza? (y/n): " << endl;
+                    cout << " -> ";
                     cin >> selection;
+                    system("CLS");
                 }
                 OrderRepository orderRepo;
                 orderRepo.storeOrder(order);
-                cout << endl;
         }
         if(selection == 'r')
         {
@@ -82,7 +92,7 @@ void SalesUI::Sales()
         if(selection != 'm' && selection != 'r' && selection != 'q')
         {
             cout << endl;
-            cout << "Wrong selection!, please choose again." << endl;
+            cout << " Wrong selection!, please choose again." << endl;
             cout << endl;
         }
     }

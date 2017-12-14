@@ -30,7 +30,7 @@ void Pizza::basePrice(int sizeofPizza)
     fin.open("pizzaPrice.dat", ios::binary);
     if(!fin.is_open())
     {
-        cout << "Error no prices found please set prices in management" << endl;
+        cout << " Error no prices found please set prices in management" << endl;
         exit(EXIT_FAILURE);
     }
     fin.read((char*)(&smallPrice), sizeof(int));
@@ -125,25 +125,25 @@ istream& operator >> (istream& in, Pizza& p)
 
 ostream& operator << (ostream& out, const Pizza& p)
 {
-    out << "Size of pizza: ";
+    out << " Size of pizza: ";
     switch(p._pizza_Size)
     {
     case 1:
-        out << "small" << endl;
+        out << " small" << endl;
         break;
     case 2:
-        out << "medium" << endl;
+        out << " medium" << endl;
         break;
     case 3:
-        out << "large" << endl;
+        out << " large" << endl;
         break;
     }
-    out << "Pizza with toppings: " << endl;
+    out << " Pizza with toppings: " << endl;
     for(unsigned int i = 0; i < p.toppings.size(); i++)
     {
         out << p.toppings[i] << endl;
     }
-    out << "Total price of the pizza: " << p._price;
+    out << " Total price of the pizza: " << p._price;
     return out;
 }
 

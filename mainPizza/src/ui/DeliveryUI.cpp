@@ -1,18 +1,20 @@
 #include "DeliveryUI.h"
 #include "PizzaRepository.h"
+#include <stdlib.h>
 
 void DeliveryUI::Delivery()
 {
     char inp = '\0';
     while(inp != 'q')
     {
-        cout << endl << "Hello Delivery Person, would you like to:" << endl;
-        cout << "v: view orders" << endl;
-        cout << "m: mark as ready" << endl;
-        cout << "p: mark pizza as paid" << endl;
-        cout << "q: quit";
-        cout << "-> ";
+        cout << endl << " Hello Delivery Person, would you like to:" << endl;
+        cout << " v: view orders" << endl;
+        cout << " m: mark as ready" << endl;
+        cout << " p: mark pizza as paid" << endl;
+        cout << " q: quit";
+        cout << " -> ";
         cin >> inp;
+        system("CLS");
              if (inp == 'v')
         {
 

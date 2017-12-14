@@ -74,7 +74,7 @@ Orders OrderRepository::getstatus(int status)
         closedir (dir);
     }
     Orders x;
-    cout << "All is done" << endl;
+    cout << " All is done" << endl;
     return x;
 
 }

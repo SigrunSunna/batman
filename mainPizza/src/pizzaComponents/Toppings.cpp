@@ -54,11 +54,11 @@ double Toppings::getPrice ()
 
 istream& operator >> (istream& in, Toppings& top)
 {
-    cout << "Name:  ";
+    cout << " Name:  ";
     in >> ws;
     getline(in, top._name);
 
-    cout << "Price: ";
+    cout << " Price: ";
     in >> top._price;
 
     return in;
@@ -66,7 +66,7 @@ istream& operator >> (istream& in, Toppings& top)
 
 ostream& operator << (ostream& out, const Toppings& top)
 {
-    out << "Topping:  " << top._name << " " ;
-    out << "Price:\t "<< top._price;
+    out << " Topping:  " << top._name << " " ;
+    out << " Price:\t "<< top._price;
     return out;
 }
