@@ -12,27 +12,7 @@ ToppingRepository::~ToppingRepository()
 {
     //dtor
 }
-/*void ToppingRepository::storeTopping(const Toppings& t)
-{
-    ofstream fout;
-    fout.open("toppings.dat", ios::binary|ios::app);
 
-    t.write(fout);
-
-    fout.close();
-}
-Toppings ToppingRepository::retrieveTopping()
-{
-    ifstream fin;
-    fin.open("toppings.dat", ios::binary);
-
-    Toppings t;
-    t.read(fin);
-
-    fin.close();
-
-    return t;
-}*/
 
 void ToppingRepository::storeAllToppings(const vector<Toppings> &toppings)
 {

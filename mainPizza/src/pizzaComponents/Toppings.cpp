@@ -45,9 +45,9 @@ void Toppings::read(ifstream& fin)
 
 
 double Toppings::getPrice ()
-        {
-            return _price;
-        }
+{
+    return _price;
+}
 
 
 
@@ -66,7 +66,12 @@ istream& operator >> (istream& in, Toppings& top)
 
 ostream& operator << (ostream& out, const Toppings& top)
 {
-    out << " Topping:  " << top._name << " " ;
-    out << " Price:\t "<< top._price;
+    int stringLength = top._name.length() + 1;
+    out << " Topping: " << top._name;
+    if(stringLength >= 10)
+    {
+        out << "\tPrice: "<< top._price;
+    }
+    else out << "\t\tPrice: "<< top._price;
     return out;
 }

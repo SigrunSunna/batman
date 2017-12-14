@@ -54,9 +54,7 @@ void Pizza::basePrice(int sizeofPizza)
 }
 
 
-Pizza::~Pizza()
-{
-}
+Pizza::~Pizza() {}
 
 void Pizza::addTopping(Toppings topping)
 {
@@ -69,11 +67,7 @@ void Pizza::write(ofstream& fout) const
     int tCount = toppings.size();
     fout.write((char*)(&tCount), sizeof(int));
     fout.write((char*)(&_pizza_Size), sizeof(int));
-    //fout.write((char*)toppings, sizeof(Toppings) * toppingCount);
-    /*for(int i = 0; i < tCount; i++)
-    {
-        fout.write((char*)(&toppings.at(i)), sizeof(Toppings));
-    }*/
+
     for(int i = 0; i < tCount; i++)
     {
         toppings[i].write(fout);

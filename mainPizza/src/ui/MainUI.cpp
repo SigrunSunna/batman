@@ -7,6 +7,8 @@ void MainUI::startUI()
     while(input != 'q')
     {
         cout << endl;
+        cout << " WELCOME TO TURBO PIZZA MEGA SYSTEM 3000X.1337" << endl;
+        cout << " ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
         cout << " What is your position?" << endl;
         cout << " Manager = m, Sales = s, Baker = b, Delivery = d, quit = q: " << endl;
         cout << " -> ";

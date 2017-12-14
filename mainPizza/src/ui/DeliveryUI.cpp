@@ -7,11 +7,12 @@ void DeliveryUI::Delivery()
     char inp = '\0';
     while(inp != 'q')
     {
-        cout << endl << " Hello Delivery Person, would you like to:" << endl;
+        cout << endl;
+        cout << " Hello Delivery Person, would you like to:" << endl;
         cout << " v: view orders" << endl;
         cout << " m: mark as ready" << endl;
         cout << " p: mark pizza as paid" << endl;
-        cout << " q: quit";
+        cout << " q: quit" << endl;
         cout << " -> ";
         cin >> inp;
         system("CLS");

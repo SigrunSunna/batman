@@ -12,9 +12,6 @@ class ToppingRepository
         ToppingRepository();
         virtual ~ToppingRepository();
 
-        //void storeTopping(const Toppings& t);
-        //Toppings retrieveTopping();
-
         void storeAllToppings(const vector<Toppings> &toppings);
         vector<Toppings> retrieveAllToppings();
 

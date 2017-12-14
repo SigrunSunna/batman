@@ -10,10 +10,11 @@ void BakerUI::Baker()
     char inp = '\0';
     while(inp != 'q')
     {
-        cout << endl << " Hello baker, would you like to:" << endl;
+        cout << endl;
+        cout << " Hello baker, would you like to:" << endl;
         cout << " v: view orders" << endl;
+        cout << " b: bake next order in line" << endl;
         cout << " q: quit " << endl;
-        cout << " b: to bake next order in line" << endl;
         cout << " -> ";
         cin >> inp;
         system("CLS");
