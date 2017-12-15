@@ -2,6 +2,7 @@
 #include "Toppings.h"
 #include "PizzaRepository.h"
 #include "ToppingRepository.h"
+#include "SidesRepository.h"
 #include <stdlib.h>
 #include "InvalidCharInput.h"
 #include "Sales_services.h"
@@ -18,6 +19,7 @@ void SalesUI::Sales()
         cout << " Hello salesperson, would you like to: " << endl;
         cout << " m: make order" << endl;
         cout << " r: read order" << endl;
+        cout << " p: mark order as paid" << endl;
         cout << " q: quit" << endl;
         cout << " -> ";
         try {
@@ -26,7 +28,6 @@ void SalesUI::Sales()
 
             if(input == 'm')
             {
-
                 int psize;
                 Orders order;
                 order.add_number();
@@ -46,13 +47,35 @@ void SalesUI::Sales()
                     cin >> input;
                     system("CLS");
                 }
+                cout << endl;
+                cout << " Would you like to add other products?" << endl;
+                cout << " yes: y" << endl;
+                cout << " no: any other key: " << endl;
+                cout << " -> ";
+                cin >> input;
+                system("CLS");
+                while(input == 'y')
+                {
+                    service.sidesChoice(order);
+                    cout << endl;
+                    cout << " Any more products?" << endl;
+                    cout << " yes: y" << endl;
+                    cout << " no: any other key: " << endl;
+                    cout << " -> ";
+                    cin >> input;
+                    system("CLS");
+                }
                 service.storeOrder(order);
             }
             if(input == 'r')
             {
                 service.retrieveAllOrders();
             }
-            if(input != 'm' && input != 'r' && input != 'q') throw InvalidCharInput();
+            if (input == 'p')
+            {
+                service.markPaid();
+            }
+            if(input != 'm' && input != 'r' && input != 'q' && input != 'p') throw InvalidCharInput();
             if(!isalpha(input)) throw InvalidCharInput();
         }
         catch(InvalidCharInput a)
@@ -63,3 +86,4 @@ void SalesUI::Sales()
         }
     }
 }
+

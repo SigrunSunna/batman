@@ -14,12 +14,14 @@ class Management_services
         virtual ~Management_services();
         void retrieveAllOrders();
         void addToppings();
+        void addSides();
         void getOrder(int ordInp);
         void sizePrice();
 
         ToppingRepository toppingRepo;
         OrderRepository orderRepo;
         PizzaRepository pizzaRepo;
+        SidesRepository sidesRepo;
 
     protected:
 

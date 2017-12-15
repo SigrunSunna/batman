@@ -41,6 +41,32 @@ void Management_services::addToppings()
     toppingRepo.storeAllToppings(toppings);
 }
 
+void Management_services::addSides()
+{
+    vector<Sides> sides = sidesRepo.retrieveAllSides();
+    for(unsigned int i = 0; i < sides.size(); i++)
+    {
+        cout << " [" << i + 1 << "] " << sides[i] << endl;
+    }
+    cout << endl;
+
+    char selection = 'y';
+    Sides s;
+    while(selection == 'y')
+    {
+        cout << " Add another side (y)?: ";
+        cin >> selection;
+        system("CLS");
+        if(selection == 'y')
+        {
+            cin >> s;
+            system("CLS");
+            sides.push_back(s);
+        }
+    }
+    sidesRepo.storeAllSides(sides);
+}
+
 void Management_services::getOrder(int ordInp)
 {
     cout << orderRepo.fetchOrder(ordInp);

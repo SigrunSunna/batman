@@ -1,19 +1,17 @@
 #include "ManagementUI.h"
-#include "PizzaRepository.h"
-#include "ToppingRepository.h"
-#include "Orders.h"
-#include <stdlib.h>
-#include "Management_services.h"
+
 
 void ManagementUI::Management()
 {
     Management_services service;
+
     char inp = '\0';
     while(inp != 'q')
     {
         cout << endl;
         cout << " Hello Manager, would you like to:" << endl;
         cout << " t: add toppings" << endl;
+        cout << " o: add other products" << endl;
         cout << " v: view orders" << endl;
         cout << " c: change pizza prices" << endl;
         cout << " r: retrieve a specific order." << endl;
@@ -32,6 +30,14 @@ void ManagementUI::Management()
             service.addToppings();
 
         }
+
+        if(inp == 'o')
+        {
+            cout << endl;
+            cout << " These are the current sides in the system: " << endl;
+            service.addSides();
+        }
+
         if(inp == 'c')
         {
             service.sizePrice();

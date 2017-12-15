@@ -63,6 +63,7 @@ void PizzaRepository::setSize()
     fin.read((char*)(&mediumPrice), sizeof(int));
     fin.read((char*)(&largePrice), sizeof(int));
 
+    cout << endl;
     cout << " Currently the price of a small pizza is: " << smallPrice << endl;
     cout << " Please set a price for a small pizza: " << endl;
     cout << " -> ";

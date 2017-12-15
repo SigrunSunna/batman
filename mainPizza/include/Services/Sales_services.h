@@ -6,6 +6,7 @@
 #include "ToppingRepository.h"
 #include <stdlib.h>
 #include "InvalidCharInput.h"
+#include "Sides.h"
 
 using namespace std;
 
@@ -18,9 +19,13 @@ class Sales_services
         void toppingChoice(Pizza& p);
         void storeOrder(Orders& order);
         void retrieveAllOrders();
+        void sidesChoice(Orders& order);
+        void markPaid();
 
         ToppingRepository toppingRepo;
         OrderRepository orderRepo;
+        SidesRepository sideRepo;
+
 
 
     protected:

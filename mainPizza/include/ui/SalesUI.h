@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Pizza.h"
 #include "ToppingRepository.h"
+#include "SidesRepository.h"
 #include "OrderRepository.h"
 #include "Orders.h"
 
