@@ -12,7 +12,6 @@ Delivery_services::~Delivery_services()
 
 void Delivery_services::viewOrders()
 {
-    orderRepo.retrieveStatus(1);
     orderRepo.retrieveStatus(2);
 }
 

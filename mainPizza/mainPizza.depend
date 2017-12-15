@@ -785,7 +785,7 @@
 	"ToppingRepository.h"
 	<fstream>
 
-1513283466 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\mainui.cpp
+1513306300 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\mainui.cpp
 	"MainUI.h"
 	<stdlib.h>
 	"InvalidCharInput.h"
@@ -806,22 +806,26 @@
 	<string.h>
 	<fstream>
 
-1513294056 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\bakerui.cpp
+1513354777 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\bakerui.cpp
 	"BakerUI.h"
 	"PizzaRepository.h"
 	<stdlib.h>
 	"Baker_services.h"
+	"InvalidCharInput.h"
 
-1513294098 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\deliveryui.cpp
+1513354974 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\deliveryui.cpp
 	"DeliveryUI.h"
 	"PizzaRepository.h"
 	<stdlib.h>
 	"Delivery_services.h"
+	"InvalidCharInput.h"
 
-1513298466 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\managementui.cpp
+1513352879 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\managementui.cpp
 	"ManagementUI.h"
+	"InvalidCharInput.h"
+	"InvalidNumInput.h"
 
-1513298056 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\salesui.cpp
+1513352879 source:c:\users\birkir\desktop\github\batman\mainpizza\src\ui\salesui.cpp
 	"SalesUI.h"
 	"Toppings.h"
 	"PizzaRepository.h"
@@ -858,16 +862,16 @@
 	"Orders.h"
 	<stdlib.h>
 
-1513293328 source:c:\users\birkir\desktop\github\batman\mainpizza\src\services\baker_services.cpp
+1513353850 source:c:\users\birkir\desktop\github\batman\mainpizza\src\services\baker_services.cpp
 	"Baker_services.h"
 
-1513293328 c:\users\birkir\desktop\github\batman\mainpizza\include\services\baker_services.h
+1513353855 c:\users\birkir\desktop\github\batman\mainpizza\include\services\baker_services.h
 	"BakerUI.h"
 	"PizzaRepository.h"
 	<stdlib.h>
 	"Baker_services.h"
 
-1513294056 source:c:\users\birkir\desktop\github\batman\mainpizza\src\services\delivery_services.cpp
+1513307460 source:c:\users\birkir\desktop\github\batman\mainpizza\src\services\delivery_services.cpp
 	"Delivery_services.h"
 
 1513294075 c:\users\birkir\desktop\github\batman\mainpizza\include\services\delivery_services.h
@@ -886,8 +890,13 @@
 	"SidesRepository.h"
 	<fstream>
 
-1513294375 source:c:\users\birkir\desktop\github\batman\mainpizza\src\pizzacomponents\sides.cpp
+1513349751 source:c:\users\birkir\desktop\github\batman\mainpizza\src\pizzacomponents\sides.cpp
 	"Sides.h"
 	<string.h>
 	<fstream>
+
+1513308053 source:c:\users\birkir\desktop\github\batman\mainpizza\src\exceptions\invalidnuminput.cpp
+	"InvalidNumInput.h"
+
+1513309004 c:\users\birkir\desktop\github\batman\mainpizza\include\exceptions\invalidnuminput.h
 

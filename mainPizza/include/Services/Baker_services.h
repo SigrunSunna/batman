@@ -12,8 +12,9 @@ class Baker_services
     public:
         Baker_services();
         virtual ~Baker_services();
-        void viewOrders();
-        void bake();
+        void viewOrdersToBake();
+        void viewReadyOrders();
+        void mark(int status);
 
         OrderRepository orderRepo;
         Orders order;

@@ -33,13 +33,10 @@ void MainUI::startUI()
                 delivery.Delivery();
             }
             if(input != 'm' && input != 's' && input != 'b' && input != 'd' && input != 'q') throw InvalidCharInput();
-            if(!isalpha(input)) throw InvalidCharInput();
         }
         catch(InvalidCharInput a)
         {
-            cout << endl;
             cout << " Wrong input!, please choose again." << endl;
-            cout << endl;
         }
 
     }

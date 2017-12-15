@@ -16,6 +16,8 @@
 					<Add directory="include/pizzaComponents" />
 					<Add directory="include/ui" />
 					<Add directory="include/Repositories" />
+					<Add directory="include/Exceptions" />
+					<Add directory="include/Services" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +30,8 @@
 					<Add directory="include/pizzaComponents" />
 					<Add directory="include/ui" />
 					<Add directory="include/Repositories" />
+					<Add directory="include/Exceptions" />
+					<Add directory="include/Services" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,12 +42,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Exceptions/InvalidCharInput.h" />
+		<Unit filename="include/Exceptions/InvalidNumInput.h" />
 		<Unit filename="include/Repositories/OrderRepository.h" />
 		<Unit filename="include/Repositories/PizzaRepository.h" />
+		<Unit filename="include/Repositories/SidesRepository.h" />
 		<Unit filename="include/Repositories/ToppingRepository.h" />
+		<Unit filename="include/Services/Baker_services.h" />
+		<Unit filename="include/Services/Delivery_services.h" />
+		<Unit filename="include/Services/Management_services.h" />
+		<Unit filename="include/Services/Sales_services.h" />
 		<Unit filename="include/pizzaComponents/Orders.h" />
 		<Unit filename="include/pizzaComponents/Pizza.h" />
 		<Unit filename="include/pizzaComponents/Prices.h" />
+		<Unit filename="include/pizzaComponents/Sides.h" />
 		<Unit filename="include/pizzaComponents/Toppings.h" />
 		<Unit filename="include/ui/BakerUI.h" />
 		<Unit filename="include/ui/DeliveryUI.h" />
@@ -51,12 +63,20 @@
 		<Unit filename="include/ui/ManagementUI.h" />
 		<Unit filename="include/ui/SalesUI.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Exceptions/InvalidCharInput.cpp" />
+		<Unit filename="src/Exceptions/InvalidNumInput.cpp" />
 		<Unit filename="src/Repositories/OrderRepository.cpp" />
 		<Unit filename="src/Repositories/PizzaRepository.cpp" />
+		<Unit filename="src/Repositories/SidesRepository.cpp" />
 		<Unit filename="src/Repositories/ToppingRepository.cpp" />
+		<Unit filename="src/Services/Baker_services.cpp" />
+		<Unit filename="src/Services/Delivery_services.cpp" />
+		<Unit filename="src/Services/Management_services.cpp" />
+		<Unit filename="src/Services/Sales_services.cpp" />
 		<Unit filename="src/pizzaComponents/Orders.cpp" />
 		<Unit filename="src/pizzaComponents/Pizza.cpp" />
 		<Unit filename="src/pizzaComponents/Prices.cpp" />
+		<Unit filename="src/pizzaComponents/Sides.cpp" />
 		<Unit filename="src/pizzaComponents/Toppings.cpp" />
 		<Unit filename="src/ui/BakerUI.cpp" />
 		<Unit filename="src/ui/DeliveryUI.cpp" />

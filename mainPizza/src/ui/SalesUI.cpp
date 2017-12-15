@@ -19,7 +19,7 @@ void SalesUI::Sales()
         cout << " Hello salesperson, would you like to: " << endl;
         cout << " m: make order" << endl;
         cout << " r: read order" << endl;
-        cout << " p: mark order as paid" << endl;
+        cout << " p: payment" << endl;
         cout << " q: quit" << endl;
         cout << " -> ";
         try {
@@ -73,16 +73,19 @@ void SalesUI::Sales()
             }
             if (input == 'p')
             {
-                service.markPaid();
+                char inp = '\0';
+                while(inp != 'p'){
+                    service.markPaid();
+                    cout << endl;
+                    cout << " p: mark next order as paid" << endl;
+                    cin >> inp;
+                }
             }
-            if(input != 'm' && input != 'r' && input != 'q' && input != 'p') throw InvalidCharInput();
-            if(!isalpha(input)) throw InvalidCharInput();
+            if(input != 'm' && input != 'r' && input != 'q' && input != 'p' && input != 'q') throw InvalidCharInput();
         }
         catch(InvalidCharInput a)
         {
-            cout << endl;
             cout << " Wrong input!, please choose again." << endl;
-            cout << endl;
         }
     }
 }

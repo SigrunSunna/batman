@@ -68,14 +68,14 @@ istream& operator >> (istream& in, Sides& sid)
 ostream& operator << (ostream& out, const Sides& sid)
 {
     int stringLength = sid._name.length() + 1;
-    out << " Sides " << sid._name;
-    if(stringLength >= 10)
+    out << " Sides: " << sid._name;
+    if(stringLength >= 12)
     {
-        out << "\tPrice: "<< sid._price;
+        out << "\tPrice:"<< sid._price;
     }
     else
     {
-        out << "\t\tPrice: "<< sid._price;
+        out << "\t\tPrice:"<< sid._price;
     }
 
     return out;
